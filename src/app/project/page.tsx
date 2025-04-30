@@ -1,43 +1,48 @@
+import { Button } from "@/components/ui/button";
+import { ArrowDown } from "lucide-react";
+import { projects } from "./data/ProjectData";
+
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Page() {
 	return (
-		<main className="py-4 max-w-full flex flex-col gap-20 md:gap-32">
+		<main className="px-4 max-w-full flex flex-col gap-20 md:gap-32">
 			<section className="w-full flex flex-col gap-8">
-				<div className="m-0">
+				<div className="m-0 text-center justify-items-center">
 					<h1>Hi, I'm Julia</h1>
 					<h2>Scroll down for the good stuff</h2>
-					{/* <IconArrowDown className="animate-bounce w-6" /> */}
+					<ArrowDown className="animate-bounce w-6 mt-2" />
 				</div>
-				<div className="w-full relative p-4 flex flex-col text-lg h-80 rounded-2xl md:box-border md:p-8">
+				<div className="w-full relative p-4 flex flex-col items-center justify-center text-lg h-80 rounded-2xl md:box-border md:p-8 bg-gradient-to-br from-purple-700 to-blue-300">
 					<div className="flex flex-row justify-start gap-2 max-w-full absolute top-4 left-4 md:top-8 md:left-8">
-						<div className="size-4 rounded-full bg-red-300"></div>
-						<div className="size-4 rounded-full bg-yellow-300"></div>
-						<div className="size-4 rounded-full bg-blue-300"></div>
+						<div className="size-4 rounded-full bg-red-300" />
+						<div className="size-4 rounded-full bg-yellow-300" />
+						<div className="size-4 rounded-full bg-blue-300" />
 					</div>
 					<div className="text-left">
-						<p className="m-0">const julia =`&lbrace;`</p>
+						<p className="m-0">{"const julia = {"}</p>
 						<p className="pl-4 m-0">
 							skills: ['HTML', 'CSS', 'Sass', 'React', 'JavaScript', 'Express',
 							'and more'],
 						</p>
 						<p className="pl-4 m-0">hardWorker: true,</p>
 						<p className="pl-4 m-0">isCreative: true,</p>
-						{/* <Typewriter
-              options={{ loop: true, autoStart: true }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString(
-                    `<span style="padding-left: 1em">likes: ['<span className="hero__typewriter-icon" role="img" aria-label="cat-emoji">😻</span>', '<span className="hero__typewriter-icon" role="img" aria-label="leaf-emoji">🌿</span>']</span>`
-                  )
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString(
-                    `<span style="padding-left: 1em">hobbies: ['<span className="hero__typewriter-icon" role="img" aria-label="boots-emoji">🥾</span>', '<span className="hero__typewriter-icon" role="img" aria-label="camping-emoji">🏕️</span>']</span>`
-                  )
-                  .pauseFor(1000)
-                  .start();
-              }}
-            /> */}
-						<p className="m-0">`&rbrace;`</p>
+						<div className="pl-4">
+							{/* <Typewriter
+								options={{
+									loop: true,
+									autoStart: true,
+									strings: [
+										'likes: ["😻", "🌿"]',
+										'hobbies: ["🥾", "🏕️"]'
+									],
+									delay: 75,
+									deleteSpeed: 50,
+								}}
+							/> */}
+						</div>
+						<p className="m-0">{"}"}</p>
 					</div>
 				</div>
 			</section>
@@ -47,31 +52,38 @@ export default function Page() {
 			</section>
 			<section className="max-w-full md:w-4/5 lg:w-full">
 				<h2>Projects</h2>
-				<div className="w-full flex flex-col justify-between items-start text-left relative">
-					{/* {projects.map((project) => (
-            <Link
-              to={`/projects/${project.id}`}
-              className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-2xl p-4 box-border gap-6 transition-[0.3s] hover:bg-blue-300/40 hover:scale-105 "
-              key={project.id}
-              onClick={() => setSelectedProject(project)}
-            >
-              <img className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2" src={project.image} />
-              <div className="lg:flex-1 lg:w-full lg:flex lg:flex-col lg:justify-between lg:items-start">
-                <h3>{project.project_name}</h3>
-                <p className="mb-6">
-                  {project.intro_text}
-                </p>
-                <div className="flex flex-row justify-start items-start flex-wrap gap-2 pb-6">
-                  {project.tags.map((tag, idx) => (
-                    <p className="m-0 leading-1.5 label" key={idx}>
-                      {tag}
-                    </p>
-                  ))}
-                </div>
-                <button>Read about {project.project_name}</button>
-              </div>
-            </Link>
-          ))} */}
+				<div className="w-full flex flex-col justify-between items-start gap-4 text-left relative">
+					{projects.map((project) => (
+						<Link
+							href={`/projects/${project.id}`}
+							className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-2xl p-4 box-border gap-6 transition-[0.3s] hover:bg-blue-300/40 hover:scale-105 "
+							key={project.id}
+							// onClick={() => setSelectedProject(project)}
+						>
+							<Image
+								className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2"
+								src={project.image}
+								alt={project.project_name}
+							/>
+							<div className="lg:flex-1 lg:w-full lg:flex lg:flex-col lg:justify-between lg:items-start">
+								<h3>{project.project_name}</h3>
+								<p className="mb-6">{project.intro_text}</p>
+								<div className="flex flex-row justify-start items-start flex-wrap gap-2 pb-6">
+									{project.tags.map((tag) => (
+										<p
+											className="m-0 leading-1.5 text-xs text-white bg-blue-300 bg-gradient-to-br from-blue-300/50 to-purple-700/50 p-2 rounded-3xl"
+											key={project.id}
+										>
+											{tag}
+										</p>
+									))}
+								</div>
+								<Button className="w-full">
+									Read about {project.project_name}
+								</Button>
+							</div>
+						</Link>
+					))}
 				</div>
 			</section>
 			{/* <Testimonials /> */}
