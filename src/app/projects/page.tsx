@@ -58,7 +58,6 @@ export default function Page() {
 							href={`/projects/${project.id}`}
 							className="w-full flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-2xl p-4 box-border gap-6 transition-[0.3s] hover:bg-blue-300/40 hover:scale-105 "
 							key={project.id}
-							// onClick={() => setSelectedProject(project)}
 						>
 							<Image
 								className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2"
