@@ -56,8 +56,8 @@ export default function Page() {
 
 	if (selectedProject) {
 		return (
-			<div className="px-4 max-w-full flex flex-col items-start gap-8">
-				<div className="w-full object-cover rounded-2xl self-center">
+			<div className="px-4 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
+				<div className="w-full object-cover rounded-lg self-center overflow-hidden shadow-2xl">
 					<Image
 						className="!relative"
 						src={selectedProject.image.src}
@@ -66,14 +66,18 @@ export default function Page() {
 						quality={100}
 					/>
 				</div>
-				<div className="w-full flex flex-col items-start gap-4">
+				<div className="w-full flex flex-col items-start gap-6">
 					<div className="w-full flex flex-row justify-between lg:justify-start gap-16 items-baseline">
-						<h1 className="m-0 text-left">{selectedProject.project_name}</h1>
+						<h1 className="m-0 text-left text-4xl font-bold bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent">
+							{selectedProject.project_name}
+						</h1>
 						<div className="flex flex-row justify-between items-center gap-8">
 							{selectedProject.url && (
 								<Link
-									className="hover:text-blue-300"
+									className="hover:text-blue-300 transition duration-300 hover:scale-110 transform"
 									href={selectedProject.url}
+									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<LinkIcon className="size-8" />
 								</Link>
@@ -81,8 +85,9 @@ export default function Page() {
 							{selectedProject.github_frontend && (
 								<Link
 									href={selectedProject.github_frontend}
-									className="hover:text-blue-300"
-									// TODO: MAKE IT OPEN IN NEW TAB
+									className="hover:text-blue-300 transition duration-300 hover:scale-110 transform"
+									target="_blank"
+									rel="noopener noreferrer"
 								>
 									<FaGithub className="size-8" />
 								</Link>
@@ -93,7 +98,7 @@ export default function Page() {
 						{selectedProject.tags?.map((tag, idx) => (
 							<p
 								key={`${selectedProject.id}-${idx}`}
-								className="m-0 text-xs text-white bg-blue-300 bg-gradient-to-br from-blue-300/50 to-purple-700/50 p-2 rounded-3xl"
+								className="m-0 text-xs text-white bg-gradient-to-r from-blue-500/80 to-purple-600/80 p-2 rounded-3xl transition-transform duration-300 shadow-lg"
 							>
 								{tag}
 							</p>
@@ -105,21 +110,25 @@ export default function Page() {
 						Object.entries(selectedProject.description).map(([key, value]) => (
 							<div
 								key={key}
-								className="w-full flex flex-col items-start gap-1 md:flex-row md:gap-4"
+								className="w-full flex flex-col items-start gap-6 md:flex-row md:gap-8 group rounded-lg"
 							>
 								{value.image && (
-									<div className="w-full md:w-1/2 object-cover">
+									<div className="w-full md:w-1/2 object-cover overflow-hidden rounded-lg shadow-xl">
 										<Image
 											src={value.image.src}
-											className="!relative rounded-2xl"
+											className="!relative rounded-lg"
 											alt={value.subtitle}
 											fill
 										/>
 									</div>
 								)}
-								<div className="w-full flex flex-col items-start md:gap-2">
-									<h2 className="m-0">{value.subtitle}</h2>
-									{value.text && parse(value.text)}
+								<div className="w-full flex flex-col items-start md:gap-4">
+									<h2 className="m-0 text-2xl font-semibold text-blue-300">
+										{value.subtitle}
+									</h2>
+									<div className="prose prose-invert max-w-none">
+										{value.text && parse(value.text)}
+									</div>
 								</div>
 							</div>
 						))}

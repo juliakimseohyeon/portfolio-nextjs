@@ -12,13 +12,15 @@ import Link from "next/link";
 export default function Page() {
 	return (
 		<main className="px-4 pb-8 max-w-full flex flex-col gap-20 md:gap-32">
-			<section className="w-full flex flex-col gap-8">
+			<section className="w-full flex flex-col gap-8 items-center">
 				<div className="m-0 text-center justify-items-center">
-					<h1>Hi, I'm Julia</h1>
+					<h1 className="bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent font-extrabold">
+						Hi, I'm Julia
+					</h1>
 					<h2>Scroll down for the good stuff</h2>
 					<ArrowDown className="animate-bounce w-6 mt-2" />
 				</div>
-				<div className="w-full relative p-4 flex flex-col items-center justify-center text-lg h-80 rounded-2xl md:box-border md:p-8 bg-gradient-to-br from-purple-700 to-blue-300">
+				<div className="w-full lg:w-4/5 relative p-4 flex flex-col items-center justify-center text-lg h-80 rounded-lg md:box-border md:p-8 bg-gradient-to-br from-purple-700 to-blue-300">
 					<div className="flex flex-row justify-start gap-2 max-w-full absolute top-4 left-4 md:top-8 md:left-8">
 						<div className="size-4 rounded-full bg-red-300" />
 						<div className="size-4 rounded-full bg-yellow-300" />
@@ -49,7 +51,7 @@ export default function Page() {
 					{projects.map((project) => (
 						<Link
 							href={`/projects/${project.id}`}
-							className="w-full lg:w-3/5 flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-2xl p-4 box-border gap-6 transition-[0.3s] hover:bg-blue-300/40 hover:scale-101"
+							className="w-full lg:w-3/5 flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-lg p-4 box-border gap-6 transition duration-300 hover:bg-blue-300/40 hover:scale-101"
 							key={project.id}
 						>
 							<Image
@@ -70,7 +72,7 @@ export default function Page() {
 										</p>
 									))}
 								</div>
-								<Button className="w-full">
+								<Button className="w-full bg-blue-300 text-black">
 									Read about {project.project_name}
 								</Button>
 							</div>
@@ -86,17 +88,17 @@ export default function Page() {
 							href={
 								"https://www.linkedin.com/in/julia-kim-seo-hyeon/details/recommendations/?detailScreenTabIndex=0"
 							}
-							className="w-full lg:w-3/5 flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative bg-blue-300/20 rounded-2xl p-4 box-border gap-6 transition-[0.3s] hover:bg-blue-300/40 hover:scale-101"
+							className="w-full lg:w-3/5 flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative border-white border-1 rounded-lg p-4 box-border gap-6 transition duration-300 hover:scale-101"
 							key={testimonial.id}
 						>
 							<Image
-								className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2"
+								className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2 border-white border-1"
 								src={testimonial.photo}
 								alt={testimonial.name}
 							/>
 							<div className="lg:flex-1 lg:w-full lg:flex lg:flex-col lg:items-start">
 								<h3>{testimonial.name}</h3>
-								<p className="mt-2 mb-6 w-fit leading-1.5 text-xs text-white bg-blue-300 bg-gradient-to-br from-blue-300/50 to-purple-700/50 p-2 rounded-3xl">
+								<p className="mt-2 mb-6 w-fit leading-1.5 text-xs text-black bg-white p-2 rounded-3xl">
 									{testimonial.relationship}
 								</p>
 								<p>{testimonial.text}</p>

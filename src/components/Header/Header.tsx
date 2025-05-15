@@ -9,10 +9,10 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-import { ChevronRightIcon, Mail, Menu, XIcon } from "lucide-react";
+import { ChevronRightIcon, Menu, XIcon } from "lucide-react";
 import { useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
-import logoJulia from "../../../public/logos/logo-julia.svg";
+import logoJulia from "../../../public/logos/logo-julia-white.svg";
 
 export default function Header() {
 	const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -113,9 +113,9 @@ export default function Header() {
 	return (
 		<header className="p-4">
 			<nav className="flex flex-row justify-between items-center">
-				<Link href="/" className="flex flex-row items-center">
+				<Link href="/" className="flex flex-row gap-2 items-center">
 					<Image src={logoJulia} alt="Julia Logo" className="max-w-6" />
-					<p className="!font-bold transition text-left leading-5 text-black dark:text-white">
+					<p className="!font-bold transition text-left leading-5 text-white">
 						Julia Kim
 					</p>
 				</Link>

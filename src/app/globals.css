@@ -58,6 +58,8 @@
 
 body {
 	font-family: "Inter", sans-serif;
+	color: white;
+	background-color: #0e1217;
 }
 
 h1 {
@@ -78,6 +80,11 @@ h3 {
 p,
 li {
 	font-weight: 200;
+}
+
+li {
+	list-style-type: disc;
+	margin-left: 1rem;
 }
 
 :root {
