@@ -5,7 +5,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import IconGithub from "../../../../public/icons/IconGithub";
+import { FaGithub } from "react-icons/fa";
 import IconUrl from "../../../../public/icons/IconUrl";
 import { projects } from "../data/ProjectData";
 
@@ -44,7 +44,6 @@ export default function Page() {
 	/* -------------------------------------------------------------------------- */
 	useEffect(() => {
 		if (projectId) {
-			console.log("id: ", projectId);
 			const id = Number.parseInt(projectId as string);
 			const project = projects.find((p) => p.id === id);
 			if (project) setSelectedProject(project as Project);
@@ -56,7 +55,6 @@ export default function Page() {
 	}
 
 	if (selectedProject) {
-		console.log("Selected project: ", selectedProject);
 		return (
 			<div className="px-4 max-w-full flex flex-col items-start gap-8">
 				<div className="w-full object-cover rounded-2xl self-center">
@@ -65,6 +63,7 @@ export default function Page() {
 						src={selectedProject.image.src}
 						alt={selectedProject.project_name}
 						fill
+						quality={100}
 					/>
 				</div>
 				<div className="w-full flex flex-col items-start gap-4">
@@ -85,7 +84,7 @@ export default function Page() {
 									className="hover:text-blue-300"
 									// TODO: MAKE IT OPEN IN NEW TAB
 								>
-									<IconGithub />
+									<FaGithub />
 								</Link>
 							)}
 						</div>
@@ -109,13 +108,12 @@ export default function Page() {
 								className="w-full flex flex-col items-start gap-1 md:flex-row md:gap-4"
 							>
 								{value.image && (
-									<div className="w-full rounded-2xl md:w-1/2 object-cover">
+									<div className="w-full md:w-1/2 object-cover">
 										<Image
 											src={value.image.src}
-											className="!relative"
+											className="!relative rounded-2xl"
 											alt={value.subtitle}
-											width={100}
-											height={100}
+											fill
 										/>
 									</div>
 								)}
