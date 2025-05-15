@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Page() {
 	return (
-		<main className="px-4 max-w-full flex flex-col gap-20 md:gap-32">
+		<main className="px-4 pb-8 max-w-full flex flex-col gap-20 md:gap-32">
 			<section className="w-full flex flex-col gap-8">
 				<div className="m-0 text-center justify-items-center">
 					<h1>Hi, I'm Julia</h1>
@@ -27,8 +27,8 @@ export default function Page() {
 					<div className="text-left">
 						<p className="m-0">{"const julia = {"}</p>
 						<p className="pl-4 m-0">
-							skills: ['HTML', 'CSS', 'Sass', 'React', 'JavaScript', 'Express',
-							'and more'],
+							skills: ['Next.js', 'TailwindCSS', 'ShadCN UI', 'Nest.js', 'Prisma
+							ORM', 'and more'],
 						</p>
 						<p className="pl-4 m-0">hardWorker: true,</p>
 						<p className="pl-4 m-0">isCreative: true,</p>
