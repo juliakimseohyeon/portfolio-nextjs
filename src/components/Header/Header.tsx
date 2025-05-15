@@ -29,11 +29,10 @@ export default function Header() {
 							onClick={() => setIsHamburgerMenuOpen(false)}
 						>
 							<XIcon className="size-6" />
-							<span className="sr-only">Toggle navigation menu</span>
 						</Button>
 						<div className="grid gap-4 py-4">
 							<Link
-								href="#"
+								href="/"
 								className="flex w-full items-center py-2 text-lg font-semibold"
 								prefetch={false}
 							>
@@ -47,7 +46,7 @@ export default function Header() {
 								<CollapsibleContent>
 									<div className="-mx-6 grid gap-6 p-6 dark:bg-gray-800">
 										<Link
-											href="#"
+											href="/projects/0"
 											className="group grid h-auto w-full justify-start gap-1"
 											prefetch={false}
 										>
@@ -60,7 +59,7 @@ export default function Header() {
 											</div>
 										</Link>
 										<Link
-											href="#"
+											href="/projects/1"
 											className="group grid h-auto w-full justify-start gap-1"
 											prefetch={false}
 										>
@@ -77,7 +76,7 @@ export default function Header() {
 								</CollapsibleContent>
 							</Collapsible>
 							<Link
-								href="#"
+								href="/graphic-design"
 								className="flex w-full items-center py-2 text-lg font-semibold"
 								prefetch={false}
 							>
