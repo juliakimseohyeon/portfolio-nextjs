@@ -23,7 +23,7 @@ export const testimonials = [
 		photo: photoSara,
 		name: "Sara (I-Chun) Chang",
 		relationship: "Colleague at BrainStation",
-		text: "Julia impressed me with her proactive attitude throughout our web development bootcamp. I consistently heard great things about Julia from other classmates, who praised her collaborative spirit and technical ability. She is not only an excellent developer with a clear approach to tackling complex functionalities but also an exceptional team player. She effectively guided our team through daily standups and ensured smooth collaboration.",
+		text: "Julia impressed me with her proactive attitude throughout our web development bootcamp. I consistently heard great things about Julia from other classmates, who praised her collaborative spirit and technical ability. She is an excellent developer with a clear approach to tackling complex functionalities. She effectively guided our team through daily standups and ensured smooth collaboration.",
 	},
 	{
 		id: 3,

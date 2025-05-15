@@ -82,30 +82,35 @@ export default function Page() {
 			</section>
 			<section className="max-w-full md:w-4/5 lg:w-full flex flex-col items-center gap-4">
 				<h2>Words on the Street</h2>
-				<div className="w-full flex flex-col justify-between items-center gap-4 text-left relative">
+				<div className="w-full flex flex-col lg:flex-row justify-between items-center gap-4 lg:flex-wrap text-left relative">
 					{testimonials.map((testimonial) => (
 						<Link
 							href={
 								"https://www.linkedin.com/in/julia-kim-seo-hyeon/details/recommendations/?detailScreenTabIndex=0"
 							}
-							className="w-full lg:w-3/5 flex flex-col lg:flex-row justify-between items-start lg:items-stretch lg:flex-1 text-left relative border-white border-1 rounded-lg p-4 box-border gap-6 transition duration-300 hover:scale-101"
+							className="w-full lg:w-[calc(50%-0.5rem)] flex flex-col justify-between items-start lg:items-stretch text-left relative border-white border-1 rounded-lg p-4 box-border gap-6 transition duration-300 hover:scale-101"
 							key={testimonial.id}
 						>
-							<Image
-								className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2 border-white border-1"
-								src={testimonial.photo}
-								alt={testimonial.name}
-							/>
-							<div className="lg:flex-1 lg:w-full lg:flex lg:flex-col lg:items-start">
-								<h3>{testimonial.name}</h3>
-								<p className="mt-2 mb-6 w-fit leading-1.5 text-xs text-black bg-white p-2 rounded-3xl">
-									{testimonial.relationship}
-								</p>
-								<p>{testimonial.text}</p>
+							<div className="flex flex-col lg:flex-row gap-4 lg:items-end">
+								<Image
+									className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2 border-white border-1"
+									src={testimonial.photo}
+									alt={testimonial.name}
+								/>
+								<div className="lg:flex lg:flex-col">
+									<h3>{testimonial.name}</h3>
+									<p className="w-fit leading-1.5 text-xs text-black bg-white p-2 rounded-3xl">
+										{testimonial.relationship}
+									</p>
+								</div>
 							</div>
+							<p>{testimonial.text}</p>
 						</Link>
 					))}
 				</div>
+				<Button className="w-full lg:w-fit bg-white text-black hover:bg-blue-300 hover:text-white cursor-pointer">
+					Read Recommendations on LinkedIn
+				</Button>
 			</section>
 		</main>
 	);
