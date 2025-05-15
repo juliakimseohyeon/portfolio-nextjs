@@ -67,12 +67,17 @@ h1 {
 
 h2 {
 	font-size: 1.5rem;
-	font-weight: 700;
+	font-weight: 900;
 }
 
 h3 {
 	font-size: 1.25rem;
 	font-weight: 700;
+}
+
+p,
+li {
+	font-weight: 200;
 }
 
 :root {

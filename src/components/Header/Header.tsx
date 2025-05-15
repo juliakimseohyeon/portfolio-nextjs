@@ -115,7 +115,9 @@ export default function Header() {
 			<nav className="flex flex-row justify-between items-center">
 				<Link href="/" className="flex flex-row items-center">
 					<Image src={logoJulia} alt="Julia Logo" className="max-w-6" />
-					<p className="font-bold transition text-left leading-5">Julia Kim</p>
+					<p className="!font-bold transition text-left leading-5 text-black dark:text-white">
+						Julia Kim
+					</p>
 				</Link>
 				<div className="flex flex-row gap-4 lg:flex-row-reverse lg:gap-10">
 					{/* <Toggle toggle={toggle} theme={theme} toggleTheme={toggleTheme} /> */}

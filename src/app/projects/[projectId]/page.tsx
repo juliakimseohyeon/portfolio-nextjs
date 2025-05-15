@@ -1,12 +1,12 @@
 "use client";
 
 import parse from "html-react-parser";
+import { LinkIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import IconUrl from "../../../../public/icons/IconUrl";
 import { projects } from "../data/ProjectData";
 
 interface ProjectDescription {
@@ -67,15 +67,15 @@ export default function Page() {
 					/>
 				</div>
 				<div className="w-full flex flex-col items-start gap-4">
-					<div className="w-full flex flex-row justify-between items-baseline">
+					<div className="w-full flex flex-row justify-between lg:justify-start gap-16 items-baseline">
 						<h1 className="m-0 text-left">{selectedProject.project_name}</h1>
-						<div className="flex flex-row justify-between gap-8">
+						<div className="flex flex-row justify-between items-center gap-8">
 							{selectedProject.url && (
 								<Link
 									className="hover:text-blue-300"
 									href={selectedProject.url}
 								>
-									<IconUrl />
+									<LinkIcon className="size-8" />
 								</Link>
 							)}
 							{selectedProject.github_frontend && (
@@ -84,7 +84,7 @@ export default function Page() {
 									className="hover:text-blue-300"
 									// TODO: MAKE IT OPEN IN NEW TAB
 								>
-									<FaGithub />
+									<FaGithub className="size-8" />
 								</Link>
 							)}
 						</div>
@@ -100,7 +100,7 @@ export default function Page() {
 						))}
 					</div>
 				</div>
-				<div className="max-w-full text-left flex flex-col gap-16 pb-20 md:gap-32">
+				<div className="max-w-full lg:w-3/5 text-left flex flex-col gap-16 pb-20 md:gap-32">
 					{selectedProject.description &&
 						Object.entries(selectedProject.description).map(([key, value]) => (
 							<div
