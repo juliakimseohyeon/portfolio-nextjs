@@ -10,7 +10,7 @@ import imgKongWhy from "../../../../public/images/projects/kong-why.jpg";
 
 export const projects = [
 	{
-		id: 0,
+		id: "kong",
 		project_name: "Kong",
 		image: imgKong,
 		intro_text:
@@ -58,7 +58,7 @@ export const projects = [
 		},
 	},
 	{
-		id: 1,
+		id: "bubblefish",
 		project_name: "Bubblefish UX",
 		image: imgBubblefish,
 		intro_text:
