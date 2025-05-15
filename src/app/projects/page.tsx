@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
+import LogoCarousel from "./components/LogoCarousel";
 import { projects } from "./data/ProjectData";
 import { testimonials } from "./data/TestimonialsData";
 
@@ -48,9 +49,9 @@ export default function Page() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full">
+			<section className="max-w-full md:w-4/5 lg:w-full flex flex-col items-center gap-4">
 				<h2>Skills</h2>
-				{/* <Carousel /> */}
+				<LogoCarousel />
 			</section>
 			<section className="max-w-full md:w-4/5 lg:w-full flex flex-col items-center gap-4">
 				<h2>Projects</h2>

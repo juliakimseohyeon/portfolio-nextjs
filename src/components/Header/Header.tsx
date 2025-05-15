@@ -15,7 +15,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import logoJulia from "../../../public/logos/logo-julia.svg";
 
 export default function Header() {
-	const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(true);
+	const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
 
 	const HamburgerMenu = () => {
 		return (
