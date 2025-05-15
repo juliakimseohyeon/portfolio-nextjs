@@ -17,7 +17,7 @@ const CarouselItem = () => {
 export default function LogoCarousel() {
 	return (
 		<div className="overflow-hidden flex flex-row relative h-24 w-full">
-			<div className="flex flex-row gap-4 absolute left-0 w-auto animate-slide">
+			<div className="flex flex-row gap-12 absolute left-0 w-auto animate-slide">
 				<CarouselItem />
 				<CarouselItem />
 			</div>

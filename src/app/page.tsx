@@ -48,7 +48,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className="w-full flex flex-col items-center gap-4">
+			<section className="w-full flex flex-col items-center gap-8">
 				<h2>Skills</h2>
 				<LogoCarousel />
 			</section>

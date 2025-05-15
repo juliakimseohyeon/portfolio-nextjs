@@ -16,7 +16,6 @@ import logoSass from "../../../../public/logos/logo-sass.svg";
 import logoShadcn from "../../../../public/logos/logo-shadcn.svg";
 import logoTailwindCss from "../../../../public/logos/logo-tailwindcss.svg";
 import logoTypescript from "../../../../public/logos/logo-typescript.svg";
-import logoVercel from "../../../../public/logos/logo-vercel.svg";
 import logoXd from "../../../../public/logos/logo-xd.svg";
 
 export const carouselImages = [
@@ -33,7 +32,6 @@ export const carouselImages = [
 	logoExpress,
 	logoOpenai,
 	logoPostman,
-	logoVercel,
 	logoNext,
 	logoNest,
 	logoShadcn,
