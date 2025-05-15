@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 import LogoCarousel from "./components/LogoCarousel";
+import TypewriterComponent from "./components/TypewriterComponent";
 import { projects } from "./data/ProjectData";
 import { testimonials } from "./data/TestimonialsData";
 
@@ -32,18 +33,7 @@ export default function Page() {
 						<p className="pl-4 m-0">hardWorker: true,</p>
 						<p className="pl-4 m-0">isCreative: true,</p>
 						<div className="pl-4">
-							{/* <Typewriter
-								options={{
-									loop: true,
-									autoStart: true,
-									strings: [
-										'likes: ["😻", "🌿"]',
-										'hobbies: ["🥾", "🏕️"]'
-									],
-									delay: 75,
-									deleteSpeed: 50,
-								}}
-							/> */}
+							<TypewriterComponent />
 						</div>
 						<p className="m-0">{"}"}</p>
 					</div>
