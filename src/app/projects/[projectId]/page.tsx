@@ -16,7 +16,7 @@ interface ProjectDescription {
 }
 
 interface Project {
-	id: number;
+	id: string;
 	project_name: string;
 	image: StaticImageData;
 	url?: string;
@@ -44,8 +44,7 @@ export default function Page() {
 	/* -------------------------------------------------------------------------- */
 	useEffect(() => {
 		if (projectId) {
-			const id = Number.parseInt(projectId as string);
-			const project = projects.find((p) => p.id === id);
+			const project = projects.find((p) => p.id === projectId);
 			if (project) setSelectedProject(project as Project);
 		}
 	}, [projectId]);
@@ -57,7 +56,7 @@ export default function Page() {
 	if (selectedProject) {
 		return (
 			<div className="px-4 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
-				<div className="w-full object-cover rounded-lg self-center overflow-hidden shadow-2xl">
+				<div className="w-full object-cover rounded-xl self-center overflow-hidden shadow-2xl">
 					<Image
 						className="!relative"
 						src={selectedProject.image.src}
@@ -110,13 +109,13 @@ export default function Page() {
 						Object.entries(selectedProject.description).map(([key, value]) => (
 							<div
 								key={key}
-								className="w-full flex flex-col items-start gap-6 md:flex-row md:gap-8 group rounded-lg"
+								className="w-full flex flex-col items-start gap-6 md:flex-row md:gap-8 group rounded-xl"
 							>
 								{value.image && (
-									<div className="w-full md:w-1/2 object-cover overflow-hidden rounded-lg shadow-xl">
+									<div className="w-full md:w-1/2 object-cover overflow-hidden rounded-xl shadow-xl">
 										<Image
 											src={value.image.src}
-											className="!relative rounded-lg"
+											className="!relative rounded-xl"
 											alt={value.subtitle}
 											fill
 										/>

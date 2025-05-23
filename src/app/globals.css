@@ -72,6 +72,10 @@ body {
 	background-color: #0e1217;
 }
 
+main {
+	padding-top: 70px;
+}
+
 h1 {
 	font-size: 2.75rem;
 	font-weight: 900;

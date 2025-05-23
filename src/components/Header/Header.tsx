@@ -19,7 +19,7 @@ export default function Header() {
 
 	const HamburgerMenu = () => {
 		return (
-			<div className="fixed top-0 left-0 z-50 flex flex-col h-screen w-screen bg-blue-300 p-4 ">
+			<div className="fixed top-0 left-0 z-50 flex flex-col h-screen w-screen bg-blue-300 p-4">
 				<Button
 					variant="ghost"
 					size="icon"
@@ -86,7 +86,7 @@ export default function Header() {
 					</Link>
 
 					<Link
-						href="#"
+						href="/about-me"
 						className="flex w-full items-center py-2 text-lg font-semibold"
 						prefetch={false}
 						onClick={() => setIsHamburgerMenuOpen(false)}
