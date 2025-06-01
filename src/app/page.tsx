@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Spotlight } from "@/components/ui/spotlight-new";
 import { ArrowDown } from "lucide-react";
 
 import LogoCarousel from "./projects/components/LogoCarousel";
@@ -20,7 +19,6 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<main className="pb-16 max-w-full flex flex-col items-center gap-40 md:gap-60">
-			<Spotlight />
 			<section className="px-4 w-full flex flex-col gap-8 items-center">
 				<div className="m-0 text-center justify-items-center">
 					<h1 className="bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent font-extrabold">

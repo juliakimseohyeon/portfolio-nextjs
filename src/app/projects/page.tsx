@@ -9,7 +9,7 @@ export default function Page() {
 	return (
 		<main className="min-h-screen bg-gradient-to-b py-16 px-4 sm:px-6 lg:px-8">
 			<div className="max-w-7xl mx-auto">
-				<div className="text-center mb-16">
+				<div className="text-center my-8 lg:mb-16">
 					<h1 className="text-4xl font-bold text-white mb-4">
 						Coding Projects
 					</h1>
@@ -19,7 +19,7 @@ export default function Page() {
 					</p>
 				</div>
 
-				<div className="w-full flex flex-col justify-between items-center gap-4 text-left relative">
+				<div className="w-full flex flex-col justify-between items-center gap-4 lg:gap-8 text-left relative">
 					{projects.map((project) => (
 						<Link
 							href={`/projects/${project.id}`}
@@ -39,7 +39,7 @@ export default function Page() {
 								<div className="flex flex-row justify-start items-start flex-wrap gap-2 pb-6">
 									{project.tags.map((tag) => (
 										<p
-											className="m-0 leading-1.5 bg-blue-500/20 text-blue-300 p-2 rounded-3xl"
+											className="m-0 text-xs text-white bg-gradient-to-r from-blue-500/80 to-purple-600/80 p-2 rounded-3xl shadow-lg"
 											key={project.id}
 										>
 											{tag}

@@ -103,7 +103,7 @@ export default function Page() {
 						{selectedProject.tags?.map((tag, idx) => (
 							<p
 								key={`${selectedProject.id}-${idx}`}
-								className="m-0 text-xs text-white bg-gradient-to-r from-blue-500/80 to-purple-600/80 p-2 rounded-3xl transition-transform duration-300 shadow-lg"
+								className="m-0 text-xs text-white bg-gradient-to-r from-blue-500/80 to-purple-600/80 p-2 rounded-3xl shadow-lg"
 							>
 								{tag}
 							</p>
