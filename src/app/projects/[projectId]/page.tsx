@@ -1,5 +1,6 @@
 "use client";
 
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import parse from "html-react-parser";
 import { LinkIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
@@ -23,6 +24,11 @@ interface Project {
 	github_frontend?: string;
 	github_backend?: string;
 	tags: string[];
+	content: {
+		title: string;
+		description: string;
+		content?: React.ReactNode;
+	}[];
 	description: {
 		what?: ProjectDescription;
 		why?: ProjectDescription;
@@ -45,7 +51,7 @@ export default function Page() {
 	useEffect(() => {
 		if (projectId) {
 			const project = projects.find((p) => p.id === projectId);
-			if (project) setSelectedProject(project as Project);
+			if (project) setSelectedProject(project as unknown as Project);
 		}
 	}, [projectId]);
 
@@ -55,7 +61,7 @@ export default function Page() {
 
 	if (selectedProject) {
 		return (
-			<main className="px-4 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
+			<main className="px-4 lg:px-8 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
 				<div className="w-full object-cover rounded-xl self-center overflow-hidden shadow-2xl">
 					<Image
 						className="!relative"
@@ -104,6 +110,7 @@ export default function Page() {
 						))}
 					</div>
 				</div>
+				<StickyScroll content={selectedProject.content} />
 				<div className="max-w-full lg:w-3/5 text-left flex flex-col gap-16 pb-20 md:gap-32">
 					{selectedProject.description &&
 						Object.entries(selectedProject.description).map(([key, value]) => (

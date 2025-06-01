@@ -1,3 +1,4 @@
+import Image from "next/image";
 import imgBubblefish from "../../../../public/images/projects/bubblefish-image.jpg";
 import imgBubblefishTech from "../../../../public/images/projects/bubblefish-tech.jpg";
 import imgBubblefishWho from "../../../../public/images/projects/bubblefish-who.jpg";
@@ -26,36 +27,68 @@ export const projects = [
 			"Image Generation",
 			"Prompt Engineering",
 		],
-		description: {
-			what: {
-				image: imgKongWhat,
-				subtitle: "What Is Kong?",
-				text: "<p>Kong is a <b>gamified plant identification app powered by OpenAI and StabilityAI</b> which aims to foster a love towards nature in a fun and artistic way. When user uploads or takes a photo of a plant, the app identifies the plant and generates a Pokémon-like illustration. The content is then added to the user's collection.</p>",
+		content: [
+			{
+				title: "What Is Kong?",
+				description:
+					"<p>Kong is a <span className='font-bold'>gamified plant identification app powered by OpenAI and StabilityAI</span> which aims to foster a love towards nature in a fun and artistic way. When user uploads or takes a photo of a plant, the app identifies the plant and generates a Pokémon-like illustration. The content is then added to the user's collection.</p>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image className="object-cover" src={imgKongWhat} alt="Kong" fill />
+					</div>
+				),
 			},
-			why: {
-				image: imgKongWhy,
-				subtitle: "Why is Kong necessary?",
-				text: "<p>According to the World Economic Forum, <b>almost 8 out of 10 children do not recognize common plants</b> like an oak leaf or a bluebell. In a world where climate crisis is worse than ever, it is essential that we don't forget about the very basics: fostering a culture where we love and appreciate nature and have empathy towards the environment.</p>",
+			{
+				title: "Why is Kong necessary?",
+				description:
+					"<p>According to the World Economic Forum, <span className='font-bold'>almost 8 out of 10 children do not recognize common plants</span> like an oak leaf or a bluebell. In a world where climate crisis is worse than ever, it is essential that we don't forget about the very basics: fostering a culture where we love and appreciate nature and have empathy towards the environment.</p>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image className="object-cover" src={imgKongWhy} alt="Kong" fill />
+					</div>
+				),
 			},
-			tech_stack: {
-				image: imgKongTech,
-				subtitle: "Tech Stack",
-				text: "<ul><li>React</li><li>Express</li><li>MySQL</li><li>OpenAI API</li><li>StabilityAI API</li></ul>",
+			{
+				title: "Tech Stack",
+				description:
+					"<ul><li>React</li><li>Express</li><li>MySQL</li><li>OpenAI API</li><li>StabilityAI API</li></ul>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image className="object-cover" src={imgKongTech} alt="Kong" fill />
+					</div>
+				),
 			},
-			how: {
-				image: imgKongHow,
-				subtitle: "How does it work?",
-				text: "<ol><li>User takes or uploads photo of a plant</li><li>MyPlantnet API identifies the plant</li><li>OpenAI API generates the plant data</li><li>StabilityAI API creates the illustration</li><li>User can read, update, or delete plant data</li></ol>",
+			{
+				title: "How does it work?",
+				description:
+					"<ol><li>User takes or uploads photo of a plant</li><li>MyPlantnet API identifies the plant</li><li>OpenAI API generates the plant data</li><li>StabilityAI API creates the illustration</li><li>User can read, update, or delete plant data</li></ol>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image src={imgKongHow} alt="Kong" />
+					</div>
+				),
 			},
-			key_learnings: {
-				subtitle: "Key Learnings",
-				text: "<ul><li>How to write efficient and effective prompts for OpenAI API and StableAI API</li><li>Know when to change course of the project</li><li>Sticking with the planned deliverable and creating a solid MVP</li><li>Importance of a good night's sleep</li></ul>",
+			{
+				title: "Key Learnings",
+				description:
+					"<ul><li>How to write efficient and effective prompts for OpenAI API and StableAI API</li><li>Know when to change course of the project</li><li>Sticking with the planned deliverable and creating a solid MVP</li><li>Importance of a good night's sleep</li></ul>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image src={imgKongWhat} alt="Kong" />
+					</div>
+				),
 			},
-			next_steps: {
-				subtitle: "Next Steps",
-				text: "<ul><li>Create login so each user would have access to their own plant collection</li><li>Incorporate Comfy UI for fine-tuned image generation</li><li>Tutorial on initial start to show how app works</li><li>Ability to send multiple photos to API for better identification</li><li>Google Maps integration to visually represent plant's habitat</li><li>Featured Plants page to show nearby plants that can be added to the collection</li></ul>",
+			{
+				title: "Next Steps",
+				description:
+					"<ul><li>Create login so each user would have access to their own plant collection</li><li>Incorporate Comfy UI for fine-tuned image generation</li><li>Tutorial on initial start to show how app works</li><li>Ability to send multiple photos to API for better identification</li><li>Google Maps integration to visually represent plant's habitat</li><li>Featured Plants page to show nearby plants that can be added to the collection</li></ul>",
+				content: (
+					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+						<Image src={imgKongWhat} alt="Kong" />
+					</div>
+				),
 			},
-		},
+		],
 	},
 	{
 		id: "bubblefish",
