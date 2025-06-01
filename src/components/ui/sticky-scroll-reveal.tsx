@@ -22,7 +22,7 @@ export const StickyScroll = ({
 		// uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
 		// target: ref
 		container: ref,
-		offset: ["start start", "end start"],
+		offset: ["start start", "end end"],
 	});
 	const cardLength = content.length;
 
@@ -83,7 +83,7 @@ export const StickyScroll = ({
 								animate={{
 									opacity: activeCard === index ? 1 : 0.3,
 								}}
-								className="mt-4 max-w-sm"
+								className="mt-4 max-w-lg"
 							>
 								{parse(item.description)}
 							</motion.p>
