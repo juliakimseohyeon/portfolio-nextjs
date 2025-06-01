@@ -4,12 +4,13 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 
-import imageCoffee from "../../../public/images/about-me-coffee.jpg";
-import imageDiving from "../../../public/images/about-me-diving.jpg";
-import imageHat1 from "../../../public/images/about-me-hat-1.jpg";
-import imageHat2 from "../../../public/images/about-me-hat-2.jpg";
-import imageHat3 from "../../../public/images/about-me-hat-3.jpg";
-import imageHat4 from "../../../public/images/about-me-hat-4.jpg";
+import "./about-me.scss";
+import imageCoffee from "../../../public/images/about-me/about-me-coffee.jpg";
+import imageDiving from "../../../public/images/about-me/about-me-diving.jpg";
+import imageHat1 from "../../../public/images/about-me/about-me-hat-1.jpg";
+import imageHat2 from "../../../public/images/about-me/about-me-hat-2.jpg";
+import imageHat3 from "../../../public/images/about-me/about-me-hat-3.jpg";
+import imageHat4 from "../../../public/images/about-me/about-me-hat-4.jpg";
 
 export default function Page() {
 	return (
@@ -22,8 +23,15 @@ export default function Page() {
 					<div className="absolute top-0 bottom-0 left-0 right-0 sky" />
 					<div className="absolute top-0 bottom-0 left-0 right-0 mountains" />
 					<div className="absolute top-0 bottom-0 left-0 right-0 me" />
+					{/* <div className="object-cover translate-z-[-400px] scale-[2.33333333] lg:translate-z-[-250px] lg:scale-[1.833333333] -z-30 opacity-50 lg:opacity-25">
+						<Image
+							src={"/images/about-me/about-me-main-sky.png"}
+							alt="Parallax image"
+							fill
+						/>
+					</div> */}
 				</section>
-				<section className="about-text__group">
+				<section className="px-4 pb-20 flex flex-col gap-12 lg:m-auto lg:gap-16 lg:w-[50%]">
 					<p className="text-left">
 						Having a graphic design and UX/UI background, I know that creating a
 						pretty website isn't enough. A developer should see the bigger
@@ -103,7 +111,7 @@ export default function Page() {
 							the methods below!
 						</p>
 					</div>
-					<div className="about-text__icon-group">
+					<div className="w-full flex flex-row justify-around items-baseline lg:w-[30%] lg:gap-4">
 						<Button className="size-12">
 							<FaGithub className="size-6" />
 						</Button>

@@ -1,0 +1,68 @@
+.sky {
+//   mask: linear-gradient(transparent, transparent, black);
+  background: url("../../../public/images/about-me/about-me-main-sky.png") no-repeat center;
+  background-size: cover;
+  transform: translateZ(-400px) scale(2.33333333);
+  z-index: -3;
+  opacity: 0.5;
+  @media (min-width: 1024px) {
+    background: url("../../../public/images/about-me/about-me-main-sky-desktop.png")
+      no-repeat center;
+    transform: translateZ(-250px) scale(1.833333333);
+    opacity: 0.25;
+    background-position: 50% 75%;
+    background-size: cover;
+  }
+}
+
+.mountains {
+  background: url("../../../public/images/about-me/about-me-main-mountains-lake.png")
+    no-repeat center;
+  background-size: cover;
+  transform: translateZ(-250px) scale(1.833333333);
+  z-index: -2;
+  mask: linear-gradient(black, transparent, transparent);
+  opacity: 0.75;
+  @media (min-width: 1024px) {
+    background: url("../../../public/images/about-me/about-me-main-mountains-lake-desktop.png")
+      no-repeat center;
+    transform: translateZ(-125px) scale(1.4167);
+    background-position: 50% 75%;
+    background-size: cover;
+  }
+}
+
+.me {
+  background: url("../../../public/images/about-me/about-me-foreground.png") no-repeat
+    center;
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  z-index: -1;
+  mask: linear-gradient(
+    black,
+    black,
+    transparent
+  );
+  backdrop-filter: blur(2px);
+  @media (min-width: 768px)  {
+    background: url("../../../public/images/about-me/about-me-foreground-tablet.png")
+      no-repeat center;
+    background-size: cover;
+  }
+  @media (min-width: 1024px) {
+    background: url("../../../public/images/about-me/about-me-foreground-desktop.png")
+      no-repeat center;
+    background-position: 50% 75%;
+    background-size: cover;
+  }
+}
+
+.hero-text {
+  background-size: cover;
+  transform: translateZ(0) scale(1);
+  text-align: center;
+  @media (min-width: 768px)  {
+    position: absolute;
+    top: 10%;
+  }
+}
