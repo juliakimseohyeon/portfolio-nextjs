@@ -20,7 +20,10 @@ export default function SocialIcons({
 				className={cn("size-12 cursor-pointer", buttonClassName)}
 				variant={variant}
 				onClick={() =>
-					window.open("https://github.com/juliakimseohyeon", "_blank")
+					window.open(
+						"https://www.linkedin.com/in/julia-kim-seo-hyeon",
+						"_blank",
+					)
 				}
 			>
 				<FaGithub className="size-6" />
