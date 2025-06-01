@@ -1,11 +1,12 @@
 .sky {
-//   mask: linear-gradient(transparent, transparent, black);
+  mask: linear-gradient(transparent 5%, rgba(0, 0, 0, 0.3) 33%, black);
   background: url("../../../public/images/about-me/about-me-main-sky.png") no-repeat center;
   background-size: cover;
   transform: translateZ(-400px) scale(2.33333333);
   z-index: -3;
   opacity: 0.5;
   @media (min-width: 1024px) {
+    mask: none;
     background: url("../../../public/images/about-me/about-me-main-sky-desktop.png")
       no-repeat center;
     transform: translateZ(-250px) scale(1.833333333);
