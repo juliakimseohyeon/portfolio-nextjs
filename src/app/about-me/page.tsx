@@ -1,10 +1,7 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
 
 import "./about-me.scss";
+import SocialIcons from "@/components/SocialIcons/SocialIcons";
 import imageCoffee from "../../../public/images/about-me/about-me-coffee.jpg";
 import imageDiving from "../../../public/images/about-me/about-me-diving.jpg";
 import imageHat1 from "../../../public/images/about-me/about-me-hat-1.jpg";
@@ -95,7 +92,7 @@ export default function Page() {
 						<p className="text-left">
 							If you can't find me at my computer, I'm either hiking, knitting,
 							kayaking, strumming the ukulele, learning a new language, or
-							travelling. I have been to 21 countries so far, and I would like
+							travelling. I have been to 25 countries so far, and I would like
 							to visit at least a 100 more. I love to learn new skills and push
 							myself. My most recent adventure has been to earn the PADI
 							Scuba-diving Certificate!
@@ -117,17 +114,11 @@ export default function Page() {
 							the methods below!
 						</p>
 					</div>
-					<div className="self-center w-full flex flex-row justify-around items-baseline lg:w-[30%] lg:gap-4">
-						<Button className="size-12 cursor-pointer hover:bg-blue-300">
-							<FaGithub className="size-6" />
-						</Button>
-						<Button className="size-12 cursor-pointer hover:bg-blue-300">
-							<FaLinkedin className="size-6" />
-						</Button>
-						<Button className="size-12 cursor-pointer hover:bg-blue-300">
-							<FaEnvelope className="size-5" />
-						</Button>
-					</div>
+					<SocialIcons
+						containerClassName="self-center w-full justify-around lg:w-[30%]"
+						buttonClassName="hover:bg-blue-300"
+						variant="ghost"
+					/>
 				</section>
 			</div>
 		</main>

@@ -13,6 +13,7 @@ import { ChevronRightIcon, Menu, XIcon } from "lucide-react";
 import { useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import logoJulia from "../../../public/logos/logo-julia-white.svg";
+import SocialIcons from "../SocialIcons/SocialIcons";
 
 export default function Header() {
 	const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
@@ -28,10 +29,10 @@ export default function Header() {
 				>
 					<XIcon className="size-6" />
 				</Button>
-				<div className="grid gap-4 py-4">
+				<div className="flex flex-col gap-8 py-4">
 					<Link
 						href="/"
-						className="flex w-full items-center py-2 text-lg font-semibold"
+						className="flex w-full items-center text-lg font-semibold"
 						prefetch={false}
 						onClick={() => setIsHamburgerMenuOpen(false)}
 					>
@@ -53,7 +54,7 @@ export default function Header() {
 									<div className="text-sm font-medium leading-none group-hover:underline">
 										Kong (Keep our nature green)
 									</div>
-									<div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+									<div className="line-clamp-2 text-sm leading-snug">
 										Gamified plant identification app powered by OpenAI and
 										StabilityAI
 									</div>
@@ -67,7 +68,7 @@ export default function Header() {
 									<div className="text-sm font-medium leading-none group-hover:underline">
 										Bubblefish UX Design
 									</div>
-									<div className="line-clamp-2 text-sm leading-snug text-gray-500 dark:text-gray-400">
+									<div className="line-clamp-2 text-sm leading-snug">
 										Revamped website for UX Design agency showcasing their
 										commitment to creating accessible, modern, and visually
 										engaging user experiences.
@@ -78,7 +79,7 @@ export default function Header() {
 					</Collapsible>
 					<Link
 						href="/graphic-design"
-						className="flex w-full items-center py-2 text-lg font-semibold"
+						className="flex w-full items-center text-lg font-semibold"
 						prefetch={false}
 						onClick={() => setIsHamburgerMenuOpen(false)}
 					>
@@ -87,24 +88,14 @@ export default function Header() {
 
 					<Link
 						href="/about-me"
-						className="flex w-full items-center py-2 text-lg font-semibold"
+						className="flex w-full items-center text-lg font-semibold"
 						prefetch={false}
 						onClick={() => setIsHamburgerMenuOpen(false)}
 					>
 						About Me
 					</Link>
 
-					<div className="flex flex-row gap-4">
-						<Button className="size-12">
-							<FaGithub className="size-6" />
-						</Button>
-						<Button className="size-12">
-							<FaLinkedin className="size-6" />
-						</Button>
-						<Button className="size-12">
-							<FaEnvelope className="size-5" />
-						</Button>
-					</div>
+					<SocialIcons buttonClassName="hover:bg-white hover:text-black" />
 				</div>
 			</div>
 		);
