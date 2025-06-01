@@ -33,7 +33,7 @@ export const projects = [
 				description:
 					"<p>Kong is a <span className='font-bold'>gamified plant identification app powered by OpenAI and StabilityAI</span> which aims to foster a love towards nature in a fun and artistic way. When user uploads or takes a photo of a plant, the app identifies the plant and generates a Pokémon-like illustration. The content is then added to the user's collection.</p>",
 				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+					<div className="flex h-full w-full items-center justify-center">
 						<Image className="object-cover" src={imgKongWhat} alt="Kong" fill />
 					</div>
 				),
@@ -43,7 +43,7 @@ export const projects = [
 				description:
 					"<p>According to the World Economic Forum, <span className='font-bold'>almost 8 out of 10 children do not recognize common plants</span> like an oak leaf or a bluebell. In a world where climate crisis is worse than ever, it is essential that we don't forget about the very basics: fostering a culture where we love and appreciate nature and have empathy towards the environment.</p>",
 				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+					<div className="flex h-full w-full items-center justify-center">
 						<Image className="object-cover" src={imgKongWhy} alt="Kong" fill />
 					</div>
 				),
@@ -53,7 +53,7 @@ export const projects = [
 				description:
 					"<ul><li>React</li><li>Express</li><li>MySQL</li><li>OpenAI API</li><li>StabilityAI API</li></ul>",
 				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+					<div className="flex h-full w-full items-center justify-center">
 						<Image className="object-cover" src={imgKongTech} alt="Kong" fill />
 					</div>
 				),
@@ -63,7 +63,7 @@ export const projects = [
 				description:
 					"<ol><li>User takes or uploads photo of a plant</li><li>MyPlantnet API identifies the plant</li><li>OpenAI API generates the plant data</li><li>StabilityAI API creates the illustration</li><li>User can read, update, or delete plant data</li></ol>",
 				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
+					<div className="flex h-full w-full items-center justify-center">
 						<Image src={imgKongHow} alt="Kong" />
 					</div>
 				),
@@ -72,21 +72,11 @@ export const projects = [
 				title: "Key Learnings",
 				description:
 					"<ul><li>How to write efficient and effective prompts for OpenAI API and StableAI API</li><li>Know when to change course of the project</li><li>Sticking with the planned deliverable and creating a solid MVP</li><li>Importance of a good night's sleep</li></ul>",
-				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
-						<Image src={imgKongWhat} alt="Kong" />
-					</div>
-				),
 			},
 			{
 				title: "Next Steps",
 				description:
 					"<ul><li>Create login so each user would have access to their own plant collection</li><li>Incorporate Comfy UI for fine-tuned image generation</li><li>Tutorial on initial start to show how app works</li><li>Ability to send multiple photos to API for better identification</li><li>Google Maps integration to visually represent plant's habitat</li><li>Featured Plants page to show nearby plants that can be added to the collection</li></ul>",
-				content: (
-					<div className="flex h-40 lg:h-full w-full items-center justify-center">
-						<Image src={imgKongWhat} alt="Kong" />
-					</div>
-				),
 			},
 		],
 	},

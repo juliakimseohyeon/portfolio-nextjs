@@ -41,11 +41,6 @@ export const StickyScroll = ({
 		setActiveCard(closestBreakpointIndex);
 	});
 
-	const backgroundColors = [
-		"#0f172a", // slate-900
-		"#000000", // black
-		"#171717", // neutral-900
-	];
 	const linearGradients = [
 		"linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
 		"linear-gradient(to bottom right, #ec4899, #6366f1)", // pink-500 to indigo-500
@@ -58,17 +53,18 @@ export const StickyScroll = ({
 
 	useEffect(() => {
 		setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+		console.log("activeCard", activeCard);
 	}, [activeCard]);
 
 	return (
 		<motion.div
-			className="relative flex flex-col-reverse lg:flex-row w-full h-[30rem] justify-start space-x-10 overflow-y-auto rounded-md no-scrollbar"
+			className="relative flex w-full h-[30rem] justify-start space-x-10 overflow-y-auto rounded-md no-scrollbar"
 			ref={ref}
 		>
-			<div className="div relative flex items-start mr-0 lg:mr-10">
-				<div className="max-w-2xl">
+			<div className="div flex items-start mr-0 lg:mr-10 absolute top-60 lg:relative lg:top-auto">
+				<div className="sticky top-1/2 lg:relative lg:top-auto">
 					{content.map((item, index) => (
-						<div key={item.title + index} className="lg:my-20">
+						<div key={item.title + index} className="my-10 lg:my-20">
 							<motion.h2
 								initial={{
 									opacity: 0,
@@ -87,7 +83,7 @@ export const StickyScroll = ({
 								animate={{
 									opacity: activeCard === index ? 1 : 0.3,
 								}}
-								className="text-kg mt-10 max-w-sm text-slate-300"
+								className="mt-4 max-w-sm"
 							>
 								{parse(item.description)}
 							</motion.p>
@@ -96,15 +92,17 @@ export const StickyScroll = ({
 					<div className="h-40" />
 				</div>
 			</div>
-			<div
-				style={{ background: backgroundGradient }}
-				className={cn(
-					"sticky top-0 lg:top-10 h-60 w-full lg:w-80 overflow-visible lg:overflow-hidden rounded-md bg-white",
-					contentClassName,
-				)}
-			>
-				{content[activeCard].content ?? null}
-			</div>
+			{content[activeCard].content && (
+				<div
+					style={{ background: backgroundGradient }}
+					className={cn(
+						"sticky w-full top-0 lg:top-10 h-60 lg:w-80 overflow-hidden rounded-md bg-white",
+						contentClassName,
+					)}
+				>
+					{content[activeCard].content ?? null}
+				</div>
+			)}
 		</motion.div>
 	);
 };

@@ -111,34 +111,6 @@ export default function Page() {
 					</div>
 				</div>
 				<StickyScroll content={selectedProject.content} />
-				<div className="max-w-full lg:w-3/5 text-left flex flex-col gap-16 pb-20 md:gap-32">
-					{selectedProject.description &&
-						Object.entries(selectedProject.description).map(([key, value]) => (
-							<div
-								key={key}
-								className="w-full flex flex-col items-start gap-6 md:flex-row md:gap-8 group rounded-xl"
-							>
-								{value.image && (
-									<div className="w-full md:w-1/2 object-cover overflow-hidden rounded-xl shadow-xl">
-										<Image
-											src={value.image.src}
-											className="!relative rounded-xl"
-											alt={value.subtitle}
-											fill
-										/>
-									</div>
-								)}
-								<div className="w-full flex flex-col items-start md:gap-4">
-									<h2 className="m-0 text-2xl font-semibold text-blue-300">
-										{value.subtitle}
-									</h2>
-									<div className="prose prose-invert max-w-none">
-										{value.text && parse(value.text)}
-									</div>
-								</div>
-							</div>
-						))}
-				</div>
 			</main>
 		);
 	}
