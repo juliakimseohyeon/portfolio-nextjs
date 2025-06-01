@@ -25,7 +25,7 @@ export default function Home() {
 						Hi, I'm Julia
 					</h1>
 					<h2>Scroll down for the good stuff</h2>
-					<ArrowDown className="animate-bounce w-6 mt-2" />
+					<ArrowDown className="animate-bounce w-6 mt-2 self-center" />
 				</div>
 				<div className="w-full lg:w-3/5 relative p-4 flex flex-col items-center justify-center text-lg h-80 rounded-lg md:box-border md:p-8 bg-gradient-to-br from-purple-700 to-blue-300">
 					<div className="flex flex-row justify-start gap-2 max-w-full absolute top-4 left-4 md:top-8 md:left-8">
@@ -106,9 +106,15 @@ export default function Home() {
 						</Link>
 					))}
 				</div>
-				<Button className="w-full lg:w-fit bg-white text-black hover:bg-blue-300 hover:text-white cursor-pointer">
-					Read Recommendations on LinkedIn
-				</Button>
+				<Link
+					href="https://www.linkedin.com/in/julia-kim-seo-hyeon/details/recommendations/?detailScreenTabIndex=0"
+					target="_blank"
+					className="w-full lg:w-fit"
+				>
+					<Button className="w-full lg:w-fit bg-white text-black hover:bg-blue-300 hover:text-white cursor-pointer">
+						Read Recommendations on LinkedIn
+					</Button>
+				</Link>
 			</section>
 		</main>
 	);
