@@ -14,19 +14,12 @@ export default function Page() {
 		<main>
 			<div className="p-0 m-0 h-[90vh] overflow-x-hidden overflow-y-scroll perspective-near lg:w-screen">
 				<section className="relative h-[90vh] w-screen transform-3d -z-10">
-					<h1 className="absolute top-0 bottom-0 left-0 right-0 hero-text">
+					<h1 className="absolute top-0 bottom-0 left-0 right-0 text-center md:absolute md:top-[10%]">
 						I'm always walking the extra mile
 					</h1>
-					<div className="absolute top-0 bottom-0 left-0 right-0 sky" />
-					<div className="absolute top-0 bottom-0 left-0 right-0 mountains" />
-					<div className="absolute top-0 bottom-0 left-0 right-0 me" />
-					{/* <div className="object-cover translate-z-[-400px] scale-[2.33333333] lg:translate-z-[-250px] lg:scale-[1.833333333] -z-30 opacity-50 lg:opacity-25">
-						<Image
-							src={"/images/about-me/about-me-main-sky.png"}
-							alt="Parallax image"
-							fill
-						/>
-					</div> */}
+					<div className="absolute top-0 bottom-0 left-0 right-0 bg-[url('/images/about-me/about-me-main-sky.png')] bg-no-repeat bg-center bg-cover translate-z-[-400px] scale-[2.33333333] -z-30 opacity-50 lg:bg-[url('/images/about-me/about-me-main-sky-desktop.png')] lg:translate-z-[-250px] lg:scale-[1.833333333] lg:opacity-25 lg:bg-[50%_75%] mask-t-from-2%" />
+					<div className="absolute top-0 bottom-0 left-0 right-0 bg-[url('/images/about-me/about-me-main-mountains-lake.png')] bg-no-repeat bg-center bg-cover translate-z-[-250px] scale-[1.833333333] -z-20 opacity-75 lg:bg-[url('/images/about-me/about-me-main-mountains-lake-desktop.png')] lg:translate-z-[-125px] lg:scale-[1.4167] lg:bg-[50%_75%]" />
+					<div className="absolute top-0 bottom-0 left-0 right-0 bg-[url('/images/about-me/about-me-foreground.png')] bg-no-repeat bg-center bg-cover translate-z-0 scale-100 -z-10 backdrop-blur-[2px] md:bg-[url('/images/about-me/about-me-foreground-tablet.png')] lg:bg-[url('/images/about-me/about-me-foreground-desktop.png')] lg:bg-[50%_75%] mask-b-from-2%" />
 				</section>
 				<section className="px-4 pb-20 flex flex-col gap-12 lg:m-auto lg:gap-16 lg:w-[50%]">
 					<p className="text-left">
