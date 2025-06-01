@@ -40,35 +40,39 @@ export default function Page() {
 						research.
 					</p>
 					<div className="flex flex-col items-start gap-4 text-left">
-						<div className="flex flex-row justify-around flex-wrap gap-4">
-							<Image
-								className="w-[calc(50%-0.5rem)] rounded-2xl"
-								src={imageHat1}
-								alt="Julia with a cap infront of Machu Picchu"
-								width={100}
-								height={100}
-							/>
-							<Image
-								className="w-[calc(50%-0.5rem)] rounded-2xl"
-								src={imageHat2}
-								alt="Julia with a colourful hat on the beach"
-								width={100}
-								height={100}
-							/>
-							<Image
-								className="w-[calc(50%-0.5rem)] rounded-2xl"
-								src={imageHat3}
-								alt="Julia with a toque infront of a lake"
-								width={100}
-								height={100}
-							/>
-							<Image
-								className="w-[calc(50%-0.5rem)] rounded-2xl"
-								src={imageHat4}
-								alt="Julia with a cap at the beach"
-								width={100}
-								height={100}
-							/>
+						<div className="flex flex-row justify-around flex-wrap gap-4 w-full relative">
+							<div className="w-[calc(50%-0.5rem)]">
+								<Image
+									className="!relative rounded-2xl"
+									src={imageHat1}
+									alt="Julia with a cap infront of Machu Picchu"
+									fill
+								/>
+							</div>
+							<div className="w-[calc(50%-0.5rem)]">
+								<Image
+									className="!relative rounded-2xl"
+									src={imageHat2}
+									alt="Julia with a colourful hat on the beach"
+									fill
+								/>
+							</div>
+							<div className="w-[calc(50%-0.5rem)]">
+								<Image
+									className="!relative rounded-2xl"
+									src={imageHat3}
+									alt="Julia with a toque infront of a lake"
+									fill
+								/>
+							</div>
+							<div className="w-[calc(50%-0.5rem)]">
+								<Image
+									className="!relative rounded-2xl"
+									src={imageHat4}
+									alt="Julia with a cap at the beach"
+									fill
+								/>
+							</div>
 						</div>
 						<h2 className="m-0">I'm used to wearing many hats</h2>
 						<p className="text-left">
@@ -78,14 +82,15 @@ export default function Page() {
 							skills and trends.
 						</p>
 					</div>
-					<div className="flex flex-col items-start gap-4 text-left">
-						<Image
-							className="w-full rounded-2xl"
-							src={imageDiving}
-							alt="Julia scuba diving"
-							width={100}
-							height={100}
-						/>
+					<div className="flex flex-col items-start gap-4 text-left relative">
+						<div className="w-full">
+							<Image
+								className="!relative rounded-2xl"
+								src={imageDiving}
+								alt="Julia scuba diving"
+								fill
+							/>
+						</div>
 						<h2 className="m-0">I'm ready to dive deep</h2>
 						<p className="text-left">
 							If you can't find me at my computer, I'm either hiking, knitting,
@@ -96,14 +101,15 @@ export default function Page() {
 							Scuba-diving Certificate!
 						</p>
 					</div>
-					<div className="flex flex-col items-start gap-4 text-left">
-						<Image
-							className="w-full rounded-2xl"
-							src={imageCoffee}
-							alt="A coffee mug with the text 'What does the future hold? Arthritis'"
-							width={100}
-							height={100}
-						/>
+					<div className="flex flex-col items-start gap-4 text-left relative">
+						<div className="w-full">
+							<Image
+								className="!relative rounded-2xl"
+								src={imageCoffee}
+								alt="A coffee mug with the text 'What does the future hold? Arthritis'"
+								fill
+							/>
+						</div>
 						<h2 className="m-0">Let's grab coffee</h2>
 						<p className="text-left">
 							Interested in hearing more about my projects? Want to hear some
@@ -111,14 +117,14 @@ export default function Page() {
 							the methods below!
 						</p>
 					</div>
-					<div className="w-full flex flex-row justify-around items-baseline lg:w-[30%] lg:gap-4">
-						<Button className="size-12">
+					<div className="self-center w-full flex flex-row justify-around items-baseline lg:w-[30%] lg:gap-4">
+						<Button className="size-12 cursor-pointer hover:bg-blue-300">
 							<FaGithub className="size-6" />
 						</Button>
-						<Button className="size-12">
+						<Button className="size-12 cursor-pointer hover:bg-blue-300">
 							<FaLinkedin className="size-6" />
 						</Button>
-						<Button className="size-12">
+						<Button className="size-12 cursor-pointer hover:bg-blue-300">
 							<FaEnvelope className="size-5" />
 						</Button>
 					</div>
