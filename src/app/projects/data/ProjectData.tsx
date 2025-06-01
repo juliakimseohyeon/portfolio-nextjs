@@ -88,26 +88,56 @@ export const projects = [
 			"'Dive in' to the art of user-centric design with Bubblefish UX! Their revamped website showcases their commitment to creating accessible, modern, and visually engaging user experiences.",
 		url: "https://www.bubblefishux.design/",
 		tags: ["Front End", "Tailwind", "Accessibility", "UI Design", "Animation"],
-		description: {
-			who: {
-				image: imgBubblefishWho,
-				subtitle: "Who is Bubblefish UX Design?",
-				text: "<p>Bubblefish UX Design is a Brighton-based UX consultancy. They have provided holistic UX design services to major UK companies such as 'Chambers and Partners', 'HMRC', 'Public Health Wales', and 'Tristar Worldwide'.</p>",
+		content: [
+			{
+				title: "Who is Bubblefish UX Design?",
+				description:
+					"<p>Bubblefish UX Design is a Brighton-based UX consultancy. They have provided holistic UX design services to major UK companies such as 'Chambers and Partners', 'HMRC', 'Public Health Wales', and 'Tristar Worldwide'.</p>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBubblefishWho}
+							alt="Bubblefish UX Design"
+							fill
+						/>
+					</div>
+				),
 			},
-			why: {
-				image: imgBubblefishWhy,
-				subtitle: "Why was the new website necessary?",
-				text: "<p>Because their focus is on creating designs that are accessible and easy to use for everyone, Bubblefish UX needed a website that would also embody those values. They also wanted to move away from their old website design to something that was more modern and polished.</p>",
+			{
+				title: "Why was the new website necessary?",
+				description:
+					"<p>Because their focus is on creating designs that are accessible and easy to use for everyone, Bubblefish UX needed a website that would also embody those values. They also wanted to move away from their old website design to something that was more modern and polished.</p>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBubblefishWhy}
+							alt="Bubblefish UX Design"
+							fill
+						/>
+					</div>
+				),
 			},
-			tech_stack: {
-				image: imgBubblefishTech,
-				subtitle: "Tech Stack",
-				text: "<ul><li>React</li><li>Tailwind</li></ul>",
+			{
+				title: "Tech Stack",
+				description: "<ul><li>React</li><li>Tailwind</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBubblefishTech}
+							alt="Bubblefish UX Design"
+							fill
+						/>
+					</div>
+				),
 			},
-			next_steps: {
-				subtitle: "Next Steps",
-				text: "<ul><li>Implement additional features such as a blog or news section to keep the content fresh and engaging.</li><li>Expand the website to include case studies and client testimonials to showcase successful projects.</li><li>Regularly update the design and content to keep up with the latest trends and user expectations.</li></ul>",
+			{
+				title: "Next Steps",
+				description:
+					"<ul><li>Implement additional features such as a blog or news section to keep the content fresh and engaging.</li><li>Expand the website to include case studies and client testimonials to showcase successful projects.</li><li>Regularly update the design and content to keep up with the latest trends and user expectations.</li></ul>",
 			},
-		},
+		],
 	},
 ];
