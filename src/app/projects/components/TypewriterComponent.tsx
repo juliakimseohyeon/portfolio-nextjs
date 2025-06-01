@@ -19,7 +19,7 @@ export default function TypewriterComponent() {
 				loop: true,
 				delay: 75,
 				deleteSpeed: 50,
-				wrapperClassName: "font-extralight",
+				wrapperClassName: "font-extralight font-emoji",
 			}}
 		/>
 	);
