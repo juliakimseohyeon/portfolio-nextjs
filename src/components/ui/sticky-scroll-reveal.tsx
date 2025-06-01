@@ -62,7 +62,7 @@ export const StickyScroll = ({
 
 	return (
 		<motion.div
-			className="relative flex flex-col-reverse lg:flex-row w-full h-[30rem] justify-start space-x-10 overflow-y-auto rounded-md"
+			className="relative flex flex-col-reverse lg:flex-row w-full h-[30rem] justify-start space-x-10 overflow-y-auto rounded-md no-scrollbar"
 			ref={ref}
 		>
 			<div className="div relative flex items-start mr-0 lg:mr-10">
