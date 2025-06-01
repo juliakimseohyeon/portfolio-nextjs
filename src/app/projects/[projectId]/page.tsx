@@ -55,7 +55,7 @@ export default function Page() {
 
 	if (selectedProject) {
 		return (
-			<div className="px-4 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
+			<main className="px-4 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
 				<div className="w-full object-cover rounded-xl self-center overflow-hidden shadow-2xl">
 					<Image
 						className="!relative"
@@ -132,7 +132,7 @@ export default function Page() {
 							</div>
 						))}
 				</div>
-			</div>
+			</main>
 		);
 	}
 }
