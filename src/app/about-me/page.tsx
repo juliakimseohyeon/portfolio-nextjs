@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-import "./about-me.scss";
 import SocialIcons from "@/components/SocialIcons/SocialIcons";
 import imageCoffee from "../../../public/images/about-me/about-me-coffee.jpg";
 import imageDiving from "../../../public/images/about-me/about-me-diving.jpg";
