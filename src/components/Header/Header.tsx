@@ -77,14 +77,14 @@ export default function Header() {
 							</div>
 						</CollapsibleContent>
 					</Collapsible>
-					<Link
+					{/* <Link
 						href="/graphic-design"
 						className="flex w-full items-center text-lg font-semibold"
 						prefetch={false}
 						onClick={() => setIsHamburgerMenuOpen(false)}
 					>
 						Graphic Projects
-					</Link>
+					</Link> */}
 
 					<Link
 						href="/about-me"
