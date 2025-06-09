@@ -7,10 +7,10 @@ export default function TypewriterComponent() {
 		<Typewriter
 			onInit={(typewriter) => {
 				typewriter
-					.typeString('likes: ["😻", "🌿"]')
+					.typeString('likes: ["\u{1F63B}", "\u{1F33F}"]')
 					.pauseFor(1000)
 					.deleteAll()
-					.typeString('hobbies: ["🥾", "🏕️"]')
+					.typeString('hobbies: ["\u{1F97E}", "\u{1F3D5}\u{FE0F}"]')
 					.pauseFor(1000)
 					.deleteAll()
 					.start();
