@@ -39,8 +39,8 @@ export default function Home() {
 							skills: ['Next.js', 'TailwindCSS', 'ShadCN UI', 'Nest.js', 'Prisma
 							ORM', 'and more'],
 						</p>
-						<p className="pl-4 m-0">hardWorker: true,</p>
-						<p className="pl-4 m-0">isCreative: true,</p>
+						<p className="pl-4 m-0">hardWorker: ✅,</p>
+						<p className="pl-4 m-0">isCreative: ✅,</p>
 						<div className="pl-4">
 							<TypewriterComponent />
 						</div>
