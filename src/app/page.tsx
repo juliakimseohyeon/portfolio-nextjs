@@ -20,12 +20,12 @@ export default function Home() {
 	return (
 		<main className="pb-16 max-w-full flex flex-col items-center gap-40 md:gap-60">
 			<section className="px-4 w-full flex flex-col gap-8 items-center">
-				<div className="m-0 text-center items-center justify-items-center">
+				<div className="m-0 text-center items-center justify-items-center flex flex-col">
 					<h1 className="bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent font-extrabold">
-						Hi, I'm Julia
+						Hi, I'm Julia 👋
 					</h1>
 					<h2>Scroll down for the good stuff</h2>
-					<ArrowDown className="animate-bounce w-6 mt-2 self-center" />
+					<ArrowDown className="animate-bounce w-6 mt-2" />
 				</div>
 				<div className="w-full lg:w-3/5 relative p-4 flex flex-col items-center justify-center text-lg h-80 rounded-lg md:box-border md:p-8 bg-gradient-to-br from-purple-700 to-blue-300">
 					<div className="flex flex-row justify-start gap-2 max-w-full absolute top-4 left-4 md:top-8 md:left-8">
