@@ -5,10 +5,13 @@ const CarouselItem = () => {
 	return carouselImages.map((image) => (
 		<div
 			className="flex flex-row w-full h-full transition duration-200"
-			key={image}
+			key={image.src}
 		>
 			<div className="h-16 w-16 flex items-center justify-center">
-				<Image src={image} alt={image} />
+				<Image
+					src={image}
+					alt={image.src.split("/").pop()?.replace(".svg", "") || ""}
+				/>
 			</div>
 		</div>
 	));
