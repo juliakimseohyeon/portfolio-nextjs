@@ -9,7 +9,7 @@ import { testimonials } from "./projects/data/TestimonialsData";
 import Image from "next/image";
 import Link from "next/link";
 
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+// import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ export default function Home() {
 						<p className="pl-4 m-0">hardWorker: true,</p>
 						<p className="pl-4 m-0">isCreative: true,</p>
 						<div className="pl-4">
-							<TypewriterEffect words={[{ text: 'likes:  ["😻", "🌿"]' }]} />
+							{/* <TypewriterEffect words={[{ text: 'likes:  ["😻", "🌿"]' }]} /> */}
 							<TypewriterComponent />
 						</div>
 						<p className="m-0">{"}"}</p>
