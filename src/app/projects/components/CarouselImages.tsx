@@ -1,7 +1,9 @@
 import logoAdobe from "../../../../public/logos/logo-adobe-cc.svg";
+import logoAwsAmplify from "../../../../public/logos/logo-aws-amplify.webp";
 import logoCss from "../../../../public/logos/logo-css.svg";
 import logoExpress from "../../../../public/logos/logo-express.svg";
 import logoFigma from "../../../../public/logos/logo-figma.svg";
+import logoHeroku from "../../../../public/logos/logo-heroku.webp";
 import logoHtml from "../../../../public/logos/logo-html.svg";
 import logoJavascript from "../../../../public/logos/logo-javascript.svg";
 import logoMysql from "../../../../public/logos/logo-mysql.svg";
@@ -19,7 +21,9 @@ import logoTypescript from "../../../../public/logos/logo-typescript.svg";
 import logoXd from "../../../../public/logos/logo-xd.svg";
 
 export const carouselImages = [
+	logoAwsAmplify,
 	logoHtml,
+	logoHeroku,
 	logoCss,
 	logoSass,
 	logoJavascript,

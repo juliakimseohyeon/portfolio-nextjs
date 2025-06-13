@@ -60,6 +60,20 @@ export default function Header() {
 									</div>
 								</Link>
 								<Link
+									href="/projects/kong"
+									className="group grid h-auto w-full justify-start gap-1"
+									prefetch={false}
+									onClick={() => setIsHamburgerMenuOpen(false)}
+								>
+									<div className="text-sm font-medium leading-none group-hover:underline">
+										BooksOpen
+									</div>
+									<div className="line-clamp-2 text-sm leading-snug">
+										Digital wingman for tattoo and piercing studios, turning
+										appointment scheduling from a headache into a breeze.
+									</div>
+								</Link>
+								<Link
 									href="/projects/bubblefish"
 									className="group grid h-auto w-full justify-start gap-1"
 									prefetch={false}

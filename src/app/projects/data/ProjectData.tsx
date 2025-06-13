@@ -1,4 +1,9 @@
 import Image from "next/image";
+import imgBooksOpen from "../../../../public/images/projects/booksopen-image.webp";
+import imgBooksOpenImpact from "../../../../public/images/projects/booksopen-impact.jpg";
+import imgBooksOpenResponsibilities from "../../../../public/images/projects/booksopen-responsibilities.jpg";
+import imgBooksOpenTech from "../../../../public/images/projects/booksopen-tech.jpg";
+import imgBooksOpenWhat from "../../../../public/images/projects/booksopen-what.svg";
 import imgBubblefish from "../../../../public/images/projects/bubblefish-image.jpg";
 import imgBubblefishTech from "../../../../public/images/projects/bubblefish-tech.jpg";
 import imgBubblefishWho from "../../../../public/images/projects/bubblefish-who.jpg";
@@ -77,6 +82,93 @@ export const projects = [
 				title: "Next Steps",
 				description:
 					"<ul><li>Create login so each user would have access to their own plant collection</li><li>Incorporate Comfy UI for fine-tuned image generation</li><li>Tutorial on initial start to show how app works</li><li>Ability to send multiple photos to API for better identification</li><li>Google Maps integration to visually represent plant's habitat</li><li>Featured Plants page to show nearby plants that can be added to the collection</li></ul>",
+			},
+		],
+	},
+	{
+		id: "booksopen",
+		project_name: "BooksOpen",
+		image: imgBooksOpen,
+		intro_text:
+			"Say goodbye to booking chaos! BooksOpen is your digital wingman for tattoo and piercing studios, turning appointment scheduling from a headache into a breeze. Built with love for service providers and clients alike, it's the modern way to manage your ink and piercing journey.",
+		url: "https://booksopen.io",
+		tags: [
+			"Full Stack",
+			"Next.js",
+			"TypeScript",
+			"Nest.js",
+			"PostgreSQL",
+			"Prisma",
+			"AWS",
+			"Heroku",
+			"Tailwind CSS",
+			"ShadCN UI",
+		],
+		content: [
+			{
+				title: "What is BooksOpen?",
+				description:
+					"<p>BooksOpen is a <span className='font-bold'>specialized scheduling system for the tattoo and piercing industry</span>. It streamlines the booking process, enhances communication between clients and service providers, and improves overall operational efficiency. The platform was developed with a strong focus on user experience and technical reliability.</p>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover !top-1/3 !left-1/5"
+							src={imgBooksOpenWhat}
+							alt="BooksOpen"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Tech Stack",
+				description:
+					"<ul><li><span className='font-bold'>Backend:</span> Nest.js with TypeScript for type safety, and Bull queue management for handling high-volume appointment requests</li><li><span className='font-bold'>Database:</span> PostgreSQL with Prisma ORM for robust data management</li><li><span className='font-bold'>Frontend:</span> Next.js with TypeScript,Tailwind CSS and ShadCN UI for a modern, responsive interface</li><li><span className='font-bold'>Deployment:</span> Heroku for backend services and AWS Amplify for frontend hosting</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBooksOpenTech}
+							alt="BooksOpen"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Key Responsibilities",
+				description:
+					"<ul><li>Collaborated with key decision makers and technical leads to align business objectives with technology initiatives</li><li>Shaped product strategy and defined technical roadmap as the sole long-term developer</li><li>Designed and optimized database schema for performance and maintainability</li><li>Managed deployment and continuous integration processes</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBooksOpenResponsibilities}
+							alt="BooksOpen"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Impact and Results",
+				description:
+					"<ul><li>Streamlined booking process for tattoo and piercing businesses</li><li>Enhanced communication between clients and service providers</li><li>Improved operational efficiency through automated scheduling</li><li>Established robust and scalable infrastructure</li><li>Fostered a collaborative and growth-oriented team environment</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgBooksOpenImpact}
+							alt="BooksOpen"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Key Learnings",
+				description:
+					"<ul><li>Importance of aligning technical decisions with business objectives</li><li>Value of robust queue management for handling high-volume requests</li><li>Benefits of modern frontend frameworks for responsive design</li><li>Significance of cross-disciplinary collaboration in project success</li><li>Impact of continuous integration and deployment practices</li></ul>",
 			},
 		],
 	},
