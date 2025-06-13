@@ -1,8 +1,11 @@
 "use client";
 
+import GraphemeSplitter from "grapheme-splitter";
 import Typewriter from "typewriter-effect";
 
 export default function TypewriterComponent() {
+	const splitter = new GraphemeSplitter();
+
 	return (
 		<div className="font-emoji">
 			<div className="inline-block">
@@ -22,6 +25,7 @@ export default function TypewriterComponent() {
 						delay: 75,
 						deleteSpeed: 50,
 						wrapperClassName: "font-emoji font-thin inline-block",
+						stringSplitter: (text) => splitter.splitGraphemes(text),
 					}}
 				/>
 			</div>
