@@ -211,5 +211,8 @@ li {
 
 .font-emoji {
 	font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-		"Noto Color Emoji", sans-serif;
+		"Noto Color Emoji", "Android Emoji", "EmojiOne Color", "EmojiOne",
+		"Twemoji Mozilla", "Noto Emoji", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
