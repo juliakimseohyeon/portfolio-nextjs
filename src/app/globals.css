@@ -9,7 +9,7 @@
 
 @font-face {
 	font-family: "Noto Color Emoji";
-	src: url(https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap);
+	src: local("Noto Color Emoji");
 	font-display: swap;
 }
 
