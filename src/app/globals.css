@@ -7,6 +7,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+	font-family: "Noto Color Emoji";
+	src: url(https://fonts.gstatic.com/s/notocoloremoji/v25/Yq6P-KqIXTD0t4D9z1ESnKM3-HpFabsE4tq3luCC9K5v8.0.woff2)
+		format("woff2");
+}
+
 @keyframes slide {
 	0% {
 		transform: translateX(0);
@@ -71,7 +77,7 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Inter", "Noto Color Emoji", sans-serif;
 	color: white;
 	background-color: #0e1217;
 }
