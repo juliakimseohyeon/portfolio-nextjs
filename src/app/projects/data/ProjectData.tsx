@@ -21,9 +21,7 @@ export const projects = [
 		image: imgKong,
 		intro_text:
 			"Get ready to fall in love with nature! Kong is a gamified plant identification app powered by OpenAI and StabilityAI which aims to foster a love for nature in a fun and artistic way.",
-		url: "https://kong-app.netlify.app/",
-		github_frontend: "https://github.com/juliakimseohyeon/kong-app",
-		github_backend: "https://github.com/juliakimseohyeon/kong-app-api",
+		url: "thekong.ca",
 		tags: [
 			"Full Stack",
 			"Open AI",
@@ -56,7 +54,7 @@ export const projects = [
 			{
 				title: "Tech Stack",
 				description:
-					"<ul><li>React</li><li>Express</li><li>MySQL</li><li>OpenAI API</li><li>StabilityAI API</li></ul>",
+					"<ul><li><span className='font-bold'>Authentication:</span> Clerk for secure and user-friendly authentication</li><li><span className='font-bold'>Backend:</span> Nest.js with TypeScript for type safety, structure and scalability</li><li><span className='font-bold'>Database:</span> Neon.tech's serverless PostgreSQL for effortless scaling</li><li><span className='font-bold'>Frontend:</span> Next.js with TypeScript,Tailwind CSS and ShadCN UI for a beautiful, accessible, and responsive interface</li><li><span className='font-bold'>Deployment:</span> Heroku for backend services and Vercel for frontend hosting</li></ul>",
 				content: (
 					<div className="flex h-full w-full items-center justify-center">
 						<Image className="object-cover" src={imgKongTech} alt="Kong" fill />
