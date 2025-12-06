@@ -80,13 +80,13 @@ export default function Home() {
 			</section>
 			<section className="px-4 max-w-full md:w-4/5 flex flex-col items-center gap-8">
 				<h2>Words on the Street</h2>
-				<div className="w-full flex flex-col lg:flex-row justify-between items-center gap-4 lg:flex-wrap text-left relative">
+				<div className="w-full flex flex-col lg:flex-row justify-between items-center lg:items-stretch gap-4 lg:flex-wrap text-left relative">
 					{testimonials.map((testimonial) => (
 						<Link
 							href={
 								"https://www.linkedin.com/in/julia-kim-seo-hyeon/details/recommendations/?detailScreenTabIndex=0"
 							}
-							className="w-full lg:w-[calc(50%-0.5rem)] flex flex-col justify-between items-start lg:items-stretch text-left relative border-white border-1 rounded-lg p-4 box-border gap-6 transition duration-300 hover:scale-101"
+							className="w-full lg:w-[calc(50%-0.5rem)] flex flex-col justify-start items-start lg:items-stretch text-left relative border-white border-1 rounded-lg p-4 box-border gap-6 transition duration-300 hover:scale-101"
 							key={testimonial.id}
 						>
 							<div className="flex flex-col lg:flex-row gap-4 lg:items-end">
@@ -95,9 +95,9 @@ export default function Home() {
 									src={testimonial.photo}
 									alt={testimonial.name}
 								/>
-								<div className="lg:flex lg:flex-col">
+								<div className="lg:flex lg:flex-col gap-2">
 									<h3>{testimonial.name}</h3>
-									<p className="w-fit leading-1.5 text-xs text-black bg-white p-2 rounded-3xl">
+									<p className="w-fit text-sm text-black bg-white p-2 rounded-full">
 										{testimonial.relationship}
 									</p>
 								</div>
