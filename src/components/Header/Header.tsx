@@ -60,7 +60,7 @@ export default function Header() {
 									</div>
 								</Link>
 								<Link
-									href="/projects/kong"
+									href="/projects/booksopen"
 									className="group grid h-auto w-full justify-start gap-1"
 									prefetch={false}
 									onClick={() => setIsHamburgerMenuOpen(false)}
