@@ -6,6 +6,7 @@ import photoJacob from "../../../../public/images/testimonials/jacob.jpg";
 import photoJames from "../../../../public/images/testimonials/james.jpg";
 import photoSara from "../../../../public/images/testimonials/sara.jpg";
 import photoStephen from "../../../../public/images/testimonials/stephen.jpg";
+import photoVictor from "../../../../public/images/testimonials/victor.jpg";
 
 export const testimonials = [
 	{
@@ -14,6 +15,13 @@ export const testimonials = [
 		name: "Gary Chen",
 		relationship: "Product Manager @BooksOpen",
 		text: "100% a great addition to any team. Amazing learner, pure demonstration of range, and incredible commitment to customer and user experience across disciplines!",
+	},
+	{
+		id: uuidv4(),
+		photo: photoVictor,
+		name: "Victor Nogueira",
+		relationship: "Senior Software Developer @BooksOpen",
+		text: "When I first started as a Senior Developer at BooksOpen, she was a huge help getting me up to speed with the system. I was honestly blown away by how fast she picked things up – she's a super quick learner and always game to try out new ideas. Julia's always professional and really proactive. Even though she was a junior dev on our small startup team, she was a massive help. She wasn't afraid to jump into big discussions and planning sessions for system changes, which was awesome to see. What really stood out to me was how much she grew in owning her work. She became great at taking features from start to finish with just a little guidance. Julia's a fantastic addition to any team, and I'd happily recommend her!",
 	},
 	{
 		id: uuidv4(),
