@@ -20,7 +20,7 @@ export const testimonials = [
 		id: uuidv4(),
 		photo: photoVictor,
 		name: "Victor Nogueira",
-		relationship: "Senior Software Developer @BooksOpen",
+		relationship: "Senior Developer @BooksOpen",
 		text: "When I first started as a Senior Developer at BooksOpen, she was a huge help getting me up to speed with the system. I was honestly blown away by how fast she picked things up – she's a super quick learner and always game to try out new ideas. Julia's always professional and really proactive. Even though she was a junior dev on our small startup team, she was a massive help. She wasn't afraid to jump into big discussions and planning sessions for system changes, which was awesome to see. What really stood out to me was how much she grew in owning her work. She became great at taking features from start to finish with just a little guidance. Julia's a fantastic addition to any team, and I'd happily recommend her!",
 	},
 	{
