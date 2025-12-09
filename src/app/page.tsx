@@ -88,11 +88,14 @@ export default function Home() {
 							key={testimonial.id}
 						>
 							<div className="flex flex-col lg:flex-row gap-4 lg:items-end">
-								<Image
-									className="w-full rounded-lg object-cover lg:flex-none lg:w-1/2 border-white border-1"
-									src={testimonial.photo}
-									alt={testimonial.name}
-								/>
+								<div className="w-full lg:flex-none lg:w-1/2 relative">
+									<Image
+										className="!relative rounded-lg object-cover md:max-w-[350px] border-white border-1"
+										src={testimonial.photo}
+										alt={testimonial.name}
+										fill
+									/>
+								</div>
 								<div className="lg:flex lg:flex-col gap-2">
 									<h3>{testimonial.name}</h3>
 									<p className="w-fit text-sm text-black bg-white p-2 rounded-full">
