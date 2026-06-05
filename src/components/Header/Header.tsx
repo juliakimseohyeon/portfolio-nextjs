@@ -8,7 +8,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import logoJulia from "../../../public/logos/logo-julia-white.svg";
 import SocialIcons from "../SocialIcons/SocialIcons";
 
-const projects = [
+const navProjects = [
 	{
 		href: "/projects/kong",
 		name: "Kong",
@@ -31,6 +31,12 @@ const navItems = [
 	{ href: "/about-me", label: "About Me" },
 ];
 
+const frostedBg: React.CSSProperties = {
+	background: "rgba(0,0,0,0.85)",
+	backdropFilter: "saturate(180%) blur(20px)",
+	WebkitBackdropFilter: "saturate(180%) blur(20px)",
+};
+
 export default function Header() {
 	const [menuOpen, setMenuOpen] = useState(false);
 	const [projectsOpen, setProjectsOpen] = useState(false);
@@ -43,14 +49,8 @@ export default function Header() {
 	return (
 		<>
 			<header
-				className="fixed z-50 w-full"
-				style={{
-					background: "rgba(0,0,0,0.85)",
-					backdropFilter: "saturate(180%) blur(20px)",
-					WebkitBackdropFilter: "saturate(180%) blur(20px)",
-					borderBottom: "1px solid rgba(255,255,255,0.08)",
-					height: "44px",
-				}}
+				className="fixed z-50 w-full border-b border-white/[0.08] h-[44px]"
+				style={frostedBg}
 			>
 				<nav className="h-full px-5 flex items-center justify-between max-w-[1200px] mx-auto">
 					<Link href="/" className="flex items-center gap-2" onClick={close}>
@@ -102,18 +102,12 @@ export default function Header() {
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.22 }}
 						className="fixed inset-0 z-40 flex flex-col"
-						style={{
-							background: "rgba(0,0,0,0.96)",
-							backdropFilter: "saturate(180%) blur(24px)",
-							WebkitBackdropFilter: "saturate(180%) blur(24px)",
-						}}
+						style={{ background: "rgba(0,0,0,0.96)", ...frostedBg }}
 					>
 						{/* Spacer for fixed header */}
-						<div style={{ height: "44px", flexShrink: 0 }} />
+						<div className="h-[44px] shrink-0" />
 
 						<div className="flex flex-col flex-1 overflow-y-auto px-6 py-4">
-
-							{/* Nav items */}
 							<nav className="flex flex-col">
 								{navItems.map(({ href, label }, i) => (
 									<motion.div
@@ -125,11 +119,11 @@ export default function Header() {
 										<Link
 											href={href}
 											onClick={close}
-											className="nav-menu-item"
+											className="flex items-center justify-between w-full py-[1.1rem] text-[1.35rem] font-medium text-[#f5f5f7] tracking-[-0.01em] no-underline transition-colors duration-150 hover:text-violet-400"
 										>
 											{label}
 										</Link>
-										<div className="nav-menu-divider" />
+										<div className="h-px bg-white/[0.08]" />
 									</motion.div>
 								))}
 
@@ -140,14 +134,14 @@ export default function Header() {
 									transition={{ delay: 0.15, duration: 0.25 }}
 								>
 									<button
-										className="nav-menu-item nav-menu-item--btn"
+										className="flex items-center justify-between w-full py-[1.1rem] bg-none border-none cursor-pointer text-left text-[1.35rem] font-medium text-[#f5f5f7] tracking-[-0.01em] transition-colors duration-150 hover:text-violet-400 group"
 										onClick={() => setProjectsOpen((v) => !v)}
 									>
 										<span>Projects</span>
 										<motion.span
 											animate={{ rotate: projectsOpen ? 180 : 0 }}
 											transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
-											className="nav-menu-chevron"
+											className="text-[#6e6e73] group-hover:text-violet-400 transition-colors"
 										>
 											<ChevronDown className="size-5" />
 										</motion.span>
@@ -161,10 +155,10 @@ export default function Header() {
 												animate={{ height: "auto", opacity: 1 }}
 												exit={{ height: 0, opacity: 0 }}
 												transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-												style={{ overflow: "hidden" }}
+												className="overflow-hidden"
 											>
-												<div className="nav-submenu">
-													{projects.map((p, i) => (
+												<div className="flex flex-col py-2 pb-4">
+													{navProjects.map((p, i) => (
 														<motion.div
 															key={p.href}
 															initial={{ opacity: 0, x: -8 }}
@@ -174,10 +168,14 @@ export default function Header() {
 															<Link
 																href={p.href}
 																onClick={close}
-																className="nav-submenu-item"
+																className="group flex flex-col gap-[0.2rem] px-4 py-[0.8rem] rounded-xl no-underline transition-colors duration-150 hover:bg-white/[0.05]"
 															>
-																<span className="nav-submenu-name">{p.name}</span>
-																<span className="nav-submenu-desc">{p.desc}</span>
+																<span className="text-[0.95rem] font-medium text-[#f5f5f7] transition-colors duration-150 group-hover:text-violet-400">
+																	{p.name}
+																</span>
+																<span className="text-[0.78rem] text-[#6e6e73] font-light leading-snug">
+																	{p.desc}
+																</span>
 															</Link>
 														</motion.div>
 													))}
@@ -186,11 +184,10 @@ export default function Header() {
 										)}
 									</AnimatePresence>
 
-									<div className="nav-menu-divider" />
+									<div className="h-px bg-white/[0.08]" />
 								</motion.div>
 							</nav>
 
-							{/* Social icons */}
 							<motion.div
 								initial={{ opacity: 0, y: 10 }}
 								animate={{ opacity: 1, y: 0 }}

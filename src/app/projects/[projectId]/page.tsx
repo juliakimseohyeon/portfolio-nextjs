@@ -1,6 +1,8 @@
 "use client";
 
 import ProjectTabs from "@/app/projects/components/ProjectTabs";
+import { eyebrow, chip, chipSm } from "@/lib/styles";
+import { iconLink } from "@/lib/styles";
 import { LinkIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
@@ -38,39 +40,42 @@ export default function Page() {
 
 	if (!project) {
 		return (
-			<div className="project-loading">
-				<span />
+			<div className="flex items-center justify-center h-[60vh]">
+				<span className="w-8 h-8 rounded-full border-2 border-white/10 border-t-violet-400 animate-spin" />
 			</div>
 		);
 	}
 
 	return (
-		<main className="project-page">
+		<main className="bg-black text-[#f5f5f7] min-h-svh">
+
 			{/* ── Hero image ── */}
-			<div className="project-hero-image">
+			<div className="relative w-full h-[60svh] overflow-hidden">
 				<Image
 					src={project.image.src}
 					alt={project.project_name}
 					fill
 					quality={100}
-					className="object-cover"
+					className="object-cover object-top"
 				/>
-				<div className="project-hero-overlay" />
+				<div className="absolute inset-0 bg-gradient-to-b from-black/15 to-black/85" />
 			</div>
 
 			{/* ── Header ── */}
-			<section className="project-header">
-				<div className="project-header-inner">
-					<p className="apple-eyebrow">Project</p>
-					<div className="project-title-row">
-						<h1 className="project-title">{project.project_name}</h1>
-						<div className="project-links">
+			<section className="px-6 py-16 border-b border-white/[0.07]">
+				<div className="max-w-[860px] mx-auto flex flex-col gap-4">
+					<p className={eyebrow}>Project</p>
+					<div className="flex items-center gap-5 flex-wrap">
+						<h1 className="text-[clamp(2.2rem,6vw,4rem)] font-bold tracking-[-0.03em] leading-[1.05] bg-gradient-to-br from-purple-500 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
+							{project.project_name}
+						</h1>
+						<div className="flex gap-3 items-center">
 							{project.url && (
 								<Link
 									href={project.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="icon-link"
+									className={iconLink}
 									title="Live site"
 								>
 									<LinkIcon className="size-5" />
@@ -81,7 +86,7 @@ export default function Page() {
 									href={project.github_frontend}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="icon-link"
+									className={iconLink}
 									title="GitHub"
 								>
 									<FaGithub className="size-5" />
@@ -89,25 +94,24 @@ export default function Page() {
 							)}
 						</div>
 					</div>
-					<p className="project-intro">{project.intro_text}</p>
-					<div className="project-tag-row">
+					<p className="text-[1rem] leading-[1.7] text-[#a1a1a6] max-w-[680px] m-0 font-light">
+						{project.intro_text}
+					</p>
+					<div className="flex flex-wrap gap-2 mt-1">
 						{project.tags.map((tag) => (
-							<span key={tag} className="apple-chip apple-chip-sm">
-								{tag}
-							</span>
+							<span key={tag} className={chipSm}>{tag}</span>
 						))}
 					</div>
 				</div>
 			</section>
 
-			{/* ── Divider ── */}
-			<div className="project-divider" />
-
 			{/* ── Take a closer look ── */}
-			<section className="project-tabs-section">
-				<div className="project-tabs-section-inner">
-					<p className="apple-eyebrow">Details</p>
-					<h2 className="project-tabs-headline">Take a closer look.</h2>
+			<section className="px-6 py-24">
+				<div className="max-w-[1100px] mx-auto">
+					<p className={eyebrow}>Details</p>
+					<h2 className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold tracking-[-0.025em] text-[#f5f5f7] mt-2 mb-12">
+						Take a closer look.
+					</h2>
 					<ProjectTabs items={project.content} />
 				</div>
 			</section>
