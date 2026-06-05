@@ -13,15 +13,11 @@
 	font-display: swap;
 }
 
+/* Logo carousel scroll animation */
 @keyframes slide {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-50%);
-	}
+	0%   { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
 }
-
 .animate-slide {
 	animation: slide 15s linear infinite;
 }
@@ -67,49 +63,25 @@
 
 	--animate-aurora: aurora 60s linear infinite;
 	@keyframes aurora {
-		from {
-			background-position: 50% 50%, 50% 50%;
-		}
-		to {
-			background-position: 350% 50%, 350% 50%;
-		}
+		from { background-position: 50% 50%, 50% 50%; }
+		to   { background-position: 350% 50%, 350% 50%; }
 	}
 }
 
 body {
 	font-family: "Inter", "Noto Color Emoji", sans-serif;
-	color: white;
-	background-color: #0e1217;
+	color: #f5f5f7;
+	background-color: #000;
+	-webkit-font-smoothing: antialiased;
 }
 
 main {
-	padding-top: 70px;
+	padding-top: 44px;
 }
 
-h1 {
-	font-size: 2.75rem;
-	font-weight: 900;
-}
-
-h2 {
-	font-size: 1.5rem;
-	font-weight: 900;
-}
-
-h3 {
-	font-size: 1.25rem;
-	font-weight: 700;
-}
-
-p,
-li {
-	font-weight: 200;
-}
-
-li {
-	list-style-type: disc;
-	margin-left: 1rem;
-}
+h1, h2, h3, h4 { margin: 0; }
+p, li { font-weight: 300; }
+li { list-style-type: disc; margin-left: 1rem; }
 
 :root {
 	--radius: 0.625rem;
@@ -188,24 +160,14 @@ li {
 }
 
 @layer base {
-	* {
-		@apply border-border outline-ring/50;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
+	* { @apply border-border outline-ring/50; }
+	body { @apply bg-background text-foreground; }
 }
 
 @layer utilities {
-	/* Hide scrollbar for Chrome, Safari and Opera */
-	.no-scrollbar::-webkit-scrollbar {
-		display: none;
-	}
-	/* Hide scrollbar for IE, Edge and Firefox */
-	.no-scrollbar {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
+	/* Hides scrollbar while keeping scroll — used by LogoCarousel */
+	.no-scrollbar::-webkit-scrollbar { display: none; }
+	.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
 .font-emoji {
@@ -214,4 +176,23 @@ li {
 		"Twemoji Mozilla", "Noto Emoji", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+  Styles for HTML rendered by html-react-parser inside ProjectTabs.
+  Can't use Tailwind here because the markup is generated at runtime.
+*/
+.project-tabs-description p { margin: 0 0 0.75rem; }
+.project-tabs-description ul,
+.project-tabs-description ol {
+	padding-left: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.project-tabs-description li { margin: 0; }
+.project-tabs-description .font-bold,
+.project-tabs-description span[class*="font-bold"] {
+	color: #f5f5f7;
+	font-weight: 600;
 }

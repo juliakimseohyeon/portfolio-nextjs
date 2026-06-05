@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import photoFaz from "../../../../public/images/testimonials/faz.jpg";
 import photoGary from "../../../../public/images/testimonials/gary.jpg";
 import photoGrace from "../../../../public/images/testimonials/grace.jpg";
 import photoGuillermo from "../../../../public/images/testimonials/guillermo.jpg";
@@ -6,14 +7,29 @@ import photoJacob from "../../../../public/images/testimonials/jacob.jpg";
 import photoJames from "../../../../public/images/testimonials/james.jpg";
 import photoSara from "../../../../public/images/testimonials/sara.jpg";
 import photoStephen from "../../../../public/images/testimonials/stephen.jpg";
+import photoVictor from "../../../../public/images/testimonials/victor.jpg";
 
 export const testimonials = [
+	{
+		id: uuidv4(),
+		photo: photoFaz,
+		name: "Fazlin Bandali",
+		relationship: "Co-Founder and COO @June Health",
+		text: "Julia is an incredibly strong software engineer who brought a high level of rigor, organization, and execution to the engineering team at June Health. She consistently wrote thoughtful, high-quality code while also helping drive structure across our development process, from managing Jira workflows and sprint organization to ensuring tickets were clearly scoped, prioritized, and executed efficiently. She worked extremely well cross-functionally, particularly with Product and UX, helping translate designs and user flows into polished, scalable product experiences. What stood out most about Julia was her ability to balance technical execution with operational excellence. She was dependable, detail-oriented, collaborative, and brought a calm, thoughtful approach to fast-moving product development environments. Any product and engineering team would be lucky to have her.",
+	},
 	{
 		id: uuidv4(),
 		photo: photoGary,
 		name: "Gary Chen",
 		relationship: "Product Manager @BooksOpen",
 		text: "100% a great addition to any team. Amazing learner, pure demonstration of range, and incredible commitment to customer and user experience across disciplines!",
+	},
+	{
+		id: uuidv4(),
+		photo: photoVictor,
+		name: "Victor Nogueira",
+		relationship: "Senior Developer @BooksOpen",
+		text: "When I first started as a Senior Developer at BooksOpen, she was a huge help getting me up to speed with the system. I was honestly blown away by how fast she picked things up – she's a super quick learner and always game to try out new ideas. Julia's always professional and really proactive. Even though she was a junior dev on our small startup team, she was a massive help. She wasn't afraid to jump into big discussions and planning sessions for system changes, which was awesome to see. What really stood out to me was how much she grew in owning her work. She became great at taking features from start to finish with just a little guidance. Julia's a fantastic addition to any team, and I'd happily recommend her!",
 	},
 	{
 		id: uuidv4(),
