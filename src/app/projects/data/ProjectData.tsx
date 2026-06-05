@@ -21,7 +21,7 @@ export const projects = [
 		image: imgKong,
 		intro_text:
 			"Get ready to fall in love with nature! Kong is a gamified plant identification app powered by OpenAI and StabilityAI which aims to foster a love for nature in a fun and artistic way.",
-		url: "thekong.ca",
+		url: "https://www.thekong.ca",
 		tags: [
 			"Full Stack",
 			"Open AI",
