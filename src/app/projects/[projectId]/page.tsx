@@ -1,7 +1,6 @@
 "use client";
 
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import parse from "html-react-parser";
+import ProjectTabs from "@/app/projects/components/ProjectTabs";
 import { LinkIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
@@ -9,12 +8,6 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { projects } from "../data/ProjectData";
-
-interface ProjectDescription {
-	image?: StaticImageData;
-	subtitle: string;
-	text: string;
-}
 
 interface Project {
 	id: string;
@@ -24,94 +17,100 @@ interface Project {
 	github_frontend?: string;
 	github_backend?: string;
 	tags: string[];
+	intro_text: string;
 	content: {
 		title: string;
 		description: string;
 		content?: React.ReactNode;
 	}[];
-	description: {
-		what?: ProjectDescription;
-		why?: ProjectDescription;
-		who?: ProjectDescription;
-		tech_stack?: ProjectDescription;
-		how?: ProjectDescription;
-		key_learnings?: ProjectDescription;
-		next_steps?: ProjectDescription;
-	};
-	intro_text: string;
 }
 
 export default function Page() {
 	const { projectId } = useParams();
-	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+	const [project, setProject] = useState<Project | null>(null);
 
-	/* -------------------------------------------------------------------------- */
-	/*         Function to load selected project details on initial mount         */
-	/* -------------------------------------------------------------------------- */
 	useEffect(() => {
 		if (projectId) {
-			const project = projects.find((p) => p.id === projectId);
-			if (project) setSelectedProject(project as unknown as Project);
+			const found = projects.find((p) => p.id === projectId);
+			if (found) setProject(found as unknown as Project);
 		}
 	}, [projectId]);
 
-	if (!selectedProject) {
-		return <div>Loading...</div>;
+	if (!project) {
+		return (
+			<div className="project-loading">
+				<span />
+			</div>
+		);
 	}
 
-	if (selectedProject) {
-		return (
-			<main className="px-4 lg:px-8 max-w-full flex flex-col items-start gap-8 animate-fadeIn">
-				<div className="w-full object-cover rounded-xl self-center overflow-hidden shadow-2xl">
-					<Image
-						className="!relative"
-						src={selectedProject.image.src}
-						alt={selectedProject.project_name}
-						fill
-						quality={100}
-					/>
-				</div>
-				<div className="w-full flex flex-col items-start gap-6">
-					<div className="w-full flex flex-row justify-between lg:justify-start gap-16 items-baseline">
-						<h1 className="m-0 text-left text-4xl font-bold bg-gradient-to-r from-blue-300 to-purple-500 bg-clip-text text-transparent">
-							{selectedProject.project_name}
-						</h1>
-						<div className="flex flex-row justify-between items-center gap-8">
-							{selectedProject.url && (
+	return (
+		<main className="project-page">
+			{/* ── Hero image ── */}
+			<div className="project-hero-image">
+				<Image
+					src={project.image.src}
+					alt={project.project_name}
+					fill
+					quality={100}
+					className="object-cover"
+				/>
+				<div className="project-hero-overlay" />
+			</div>
+
+			{/* ── Header ── */}
+			<section className="project-header">
+				<div className="project-header-inner">
+					<p className="apple-eyebrow">Project</p>
+					<div className="project-title-row">
+						<h1 className="project-title">{project.project_name}</h1>
+						<div className="project-links">
+							{project.url && (
 								<Link
-									className="hover:text-blue-300 transition duration-300 hover:scale-110 transform"
-									href={selectedProject.url}
+									href={project.url}
 									target="_blank"
 									rel="noopener noreferrer"
+									className="icon-link"
+									title="Live site"
 								>
-									<LinkIcon className="size-8" />
+									<LinkIcon className="size-5" />
 								</Link>
 							)}
-							{selectedProject.github_frontend && (
+							{project.github_frontend && (
 								<Link
-									href={selectedProject.github_frontend}
-									className="hover:text-blue-300 transition duration-300 hover:scale-110 transform"
+									href={project.github_frontend}
 									target="_blank"
 									rel="noopener noreferrer"
+									className="icon-link"
+									title="GitHub"
 								>
-									<FaGithub className="size-8" />
+									<FaGithub className="size-5" />
 								</Link>
 							)}
 						</div>
 					</div>
-					<div className="flex flex-row items-start gap-2 flex-wrap">
-						{selectedProject.tags?.map((tag, idx) => (
-							<p
-								key={`${selectedProject.id}-${idx}`}
-								className="m-0 text-xs text-white bg-gradient-to-r from-blue-500/80 to-purple-600/80 p-2 rounded-3xl shadow-lg"
-							>
+					<p className="project-intro">{project.intro_text}</p>
+					<div className="project-tag-row">
+						{project.tags.map((tag) => (
+							<span key={tag} className="apple-chip apple-chip-sm">
 								{tag}
-							</p>
+							</span>
 						))}
 					</div>
 				</div>
-				<StickyScroll content={selectedProject.content} />
-			</main>
-		);
-	}
+			</section>
+
+			{/* ── Divider ── */}
+			<div className="project-divider" />
+
+			{/* ── Take a closer look ── */}
+			<section className="project-tabs-section">
+				<div className="project-tabs-section-inner">
+					<p className="apple-eyebrow">Details</p>
+					<h2 className="project-tabs-headline">Take a closer look.</h2>
+					<ProjectTabs items={project.content} />
+				</div>
+			</section>
+		</main>
+	);
 }

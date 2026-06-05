@@ -2,48 +2,48 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaEnvelope } from "react-icons/fa";
-import { Button } from "../ui/button";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function SocialIcons({
 	containerClassName,
-	buttonClassName,
-	variant,
+	iconClassName,
 }: {
 	containerClassName?: string;
-	buttonClassName?: string;
-	variant?: "ghost" | "default";
+	iconClassName?: string;
 }) {
+	const links = [
+		{
+			href: "https://github.com/juliakimseohyeon",
+			label: "GitHub",
+			icon: <FaGithub className="size-5" />,
+		},
+		{
+			href: "https://www.linkedin.com/in/julia-kim-seo-hyeon",
+			label: "LinkedIn",
+			icon: <FaLinkedin className="size-5" />,
+		},
+		{
+			href: "mailto:juliakimseohyeon@gmail.com",
+			label: "Email",
+			icon: <FaEnvelope className="size-[1.1rem]" />,
+		},
+	];
+
 	return (
-		<div className={cn("flex flex-row gap-4", containerClassName)}>
-			<Link href="https://github.com/juliakimseohyeon" target="_blank">
-				<Button
-					className={cn("size-12 cursor-pointer", buttonClassName)}
-					variant={variant}
+		<div className={cn("flex flex-row gap-3", containerClassName)}>
+			{links.map(({ href, label, icon }) => (
+				<Link
+					key={label}
+					href={href}
+					target={href.startsWith("mailto") ? undefined : "_blank"}
+					rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+					className={cn("icon-link", iconClassName)}
+					title={label}
+					aria-label={label}
 				>
-					<FaGithub className="size-6" />
-				</Button>
-			</Link>
-			<Link
-				href="https://www.linkedin.com/in/julia-kim-seo-hyeon"
-				target="_blank"
-			>
-				<Button
-					className={cn("size-12 cursor-pointer", buttonClassName)}
-					variant={variant}
-				>
-					<FaLinkedin className="size-6" />
-				</Button>
-			</Link>
-			<Link href="mailto:juliakimseohyeon@gmail.com" target="_blank">
-				<Button
-					className={cn("size-12 cursor-pointer", buttonClassName)}
-					variant={variant}
-				>
-					<FaEnvelope className="size-5" />
-				</Button>
-			</Link>
+					{icon}
+				</Link>
+			))}
 		</div>
 	);
 }
