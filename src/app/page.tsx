@@ -1,37 +1,50 @@
+import {
+	btnPrimary,
+	btnSecondary,
+	chip,
+	chipSm,
+	eyebrow,
+	gradientText,
+	sectionInner,
+	sectionTitle,
+} from "@/lib/styles";
 import Image from "next/image";
 import Link from "next/link";
 import LogoCarousel from "./projects/components/LogoCarousel";
 import { projects } from "./projects/data/ProjectData";
 import { testimonials } from "./projects/data/TestimonialsData";
-import {
-	eyebrow,
-	gradientText,
-	btnPrimary,
-	btnSecondary,
-	chip,
-	chipSm,
-	sectionInner,
-	sectionTitle,
-} from "@/lib/styles";
 
 export const metadata = {
 	title: "Julia Kim — Full Stack Developer",
-	description: "Full Stack Developer. Designed to build. Engineered to impress.",
+	description:
+		"Full Stack Developer. Designed to build. Engineered to impress.",
 };
 
 const skills = [
-	{ category: "Frontend", items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI"] },
-	{ category: "Backend", items: ["Nest.js", "Node.js", "Express", "REST APIs"] },
+	{
+		category: "Frontend",
+		items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "ShadCN UI"],
+	},
+	{
+		category: "Backend",
+		items: ["Nest.js", "Node.js", "Express", "REST APIs"],
+	},
 	{ category: "Database", items: ["PostgreSQL", "Prisma ORM", "MySQL"] },
-	{ category: "AI / APIs", items: ["OpenAI API", "StabilityAI", "Prompt Engineering"] },
-	{ category: "Design", items: ["Figma", "Adobe XD", "Adobe Illustrator", "UI/UX"] },
+	{
+		category: "AI / APIs",
+		items: ["OpenAI API", "StabilityAI", "Prompt Engineering"],
+	},
+	{
+		category: "Design",
+		items: ["Figma", "Adobe XD", "Adobe Illustrator", "UI/UX"],
+	},
 	{ category: "DevOps", items: ["AWS Amplify", "Heroku", "Vercel", "Git"] },
 ];
 
 const highlights = [
 	{ stat: "3+", label: "Years of experience" },
 	{ stat: "20+", label: "Technologies mastered" },
-	{ stat: "8+", label: "Five-star reviews" },
+	{ stat: "9+", label: "Five-star reviews" },
 	{ stat: "∞", label: "Cups of coffee" },
 ];
 
@@ -41,7 +54,6 @@ const featureHeadline = "py-28 px-6 text-center border-b border-white/[0.07]";
 export default function Home() {
 	return (
 		<main className="bg-black text-[#f5f5f7]">
-
 			{/* ── Hero ── */}
 			<section className="min-h-svh flex items-center justify-center bg-black border-b border-white/10 text-center px-6 pt-24 pb-16">
 				<div className="flex flex-col items-center gap-2 max-w-[800px]">
@@ -60,7 +72,10 @@ export default function Home() {
 						Designed to build. Engineered to impress.
 					</p>
 					<div className="flex flex-wrap gap-4 justify-center">
-						<Link href="mailto:juliakimseohyeon@gmail.com" className={btnPrimary}>
+						<Link
+							href="mailto:juliakimseohyeon@gmail.com"
+							className={btnPrimary}
+						>
 							Hire Me
 						</Link>
 						<Link href="#projects" className={btnSecondary}>
@@ -74,15 +89,26 @@ export default function Home() {
 			<div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 bg-[#1d1d1f] px-6 py-[0.85rem] text-[0.8rem] text-[#a1a1a6] border-b border-white/[0.08]">
 				<span className="font-medium text-[#f5f5f7]">Available for hire</span>
 				<span className="inline-block w-px h-[14px] bg-white/20" />
-				<Link href="mailto:juliakimseohyeon@gmail.com" className="text-violet-400 transition-colors duration-150 hover:text-violet-300">
+				<Link
+					href="mailto:juliakimseohyeon@gmail.com"
+					className="text-violet-400 transition-colors duration-150 hover:text-violet-300"
+				>
 					Contact Julia
 				</Link>
 				<span className="inline-block w-px h-[14px] bg-white/20" />
-				<Link href="https://www.linkedin.com/in/julia-kim-seo-hyeon/" target="_blank" className="text-violet-400 transition-colors duration-150 hover:text-violet-300">
+				<Link
+					href="https://www.linkedin.com/in/julia-kim-seo-hyeon/"
+					target="_blank"
+					className="text-violet-400 transition-colors duration-150 hover:text-violet-300"
+				>
 					LinkedIn ↗
 				</Link>
 				<span className="inline-block w-px h-[14px] bg-white/20" />
-				<Link href="https://github.com/juliakimseohyeon" target="_blank" className="text-violet-400 transition-colors duration-150 hover:text-violet-300">
+				<Link
+					href="https://github.com/juliakimseohyeon"
+					target="_blank"
+					className="text-violet-400 transition-colors duration-150 hover:text-violet-300"
+				>
 					GitHub ↗
 				</Link>
 			</div>
@@ -122,13 +148,18 @@ export default function Home() {
 					<h2 className={sectionTitle}>Built with the best tools.</h2>
 					<div className="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6">
 						{skills.map((group) => (
-							<div key={group.category} className="bg-[#161617] border border-white/[0.08] rounded-[18px] p-7">
+							<div
+								key={group.category}
+								className="bg-[#161617] border border-white/[0.08] rounded-[18px] p-7"
+							>
 								<h3 className="text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-violet-400 mb-4">
 									{group.category}
 								</h3>
 								<div className="flex flex-wrap gap-2">
 									{group.items.map((item) => (
-										<span key={item} className={chip}>{item}</span>
+										<span key={item} className={chip}>
+											{item}
+										</span>
 									))}
 								</div>
 							</div>
@@ -139,7 +170,9 @@ export default function Home() {
 
 			{/* ── Logo carousel ── */}
 			<section className="py-20 bg-black border-b border-white/[0.07] overflow-hidden">
-				<p className={`${eyebrow} text-center mb-8`}>And more where that came from</p>
+				<p className={`${eyebrow} text-center mb-8`}>
+					And more where that came from
+				</p>
 				<LogoCarousel />
 			</section>
 
@@ -182,7 +215,9 @@ export default function Home() {
 									</p>
 									<div className="flex flex-wrap gap-[0.4rem] mt-1">
 										{project.tags.slice(0, 3).map((tag) => (
-											<span key={tag} className={chipSm}>{tag}</span>
+											<span key={tag} className={chipSm}>
+												{tag}
+											</span>
 										))}
 									</div>
 									<span className="mt-auto pt-3 text-[0.85rem] text-violet-400 font-medium transition-colors duration-150 group-hover:text-violet-300">
@@ -205,7 +240,7 @@ export default function Home() {
 				<div className="max-w-[900px] mx-auto">
 					<p className={eyebrow}>Testimonials</p>
 					<h2 className="text-[clamp(2.2rem,5.5vw,4.5rem)] font-bold tracking-[-0.025em] leading-[1.1] text-[#f5f5f7] mt-3">
-						Don&apos;t take our word for it.{" "}
+						Don&apos;t take my word for it.{" "}
 						<span className={gradientText}>Take theirs.</span>
 					</h2>
 				</div>
@@ -222,7 +257,9 @@ export default function Home() {
 								target="_blank"
 								className="group flex flex-col gap-4 bg-[#161617] border border-white/[0.08] rounded-[20px] p-7 no-underline transition-[transform,border-color] duration-200 hover:-translate-y-[3px] hover:border-violet-400/30"
 							>
-								<span className="text-amber-400 text-[0.9rem] tracking-[0.05em]">★★★★★</span>
+								<span className="text-amber-400 text-[0.9rem] tracking-[0.05em]">
+									★★★★★
+								</span>
 								<p className="text-[0.85rem] text-[#a1a1a6] leading-[1.7] flex-1 line-clamp-6 m-0">
 									&ldquo;{t.text}&rdquo;
 								</p>
@@ -237,7 +274,9 @@ export default function Home() {
 										/>
 									</div>
 									<div>
-										<p className="text-[0.85rem] font-semibold text-[#f5f5f7] m-0">{t.name}</p>
+										<p className="text-[0.85rem] font-semibold text-[#f5f5f7] m-0">
+											{t.name}
+										</p>
 										<p className="text-[0.72rem] text-[#86868b] m-0 mt-[0.1rem]">
 											{t.relationship}
 										</p>
@@ -268,7 +307,10 @@ export default function Home() {
 						<span className={gradientText}>Pro.</span>
 					</h2>
 					<div className="flex flex-wrap gap-4 justify-center">
-						<Link href="mailto:juliakimseohyeon@gmail.com" className={btnPrimary}>
+						<Link
+							href="mailto:juliakimseohyeon@gmail.com"
+							className={btnPrimary}
+						>
 							Get in Touch
 						</Link>
 						<Link
