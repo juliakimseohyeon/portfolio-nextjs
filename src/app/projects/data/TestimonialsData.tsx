@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import photoFaz from "../../../../public/images/testimonials/faz.jpg";
 import photoGary from "../../../../public/images/testimonials/gary.jpg";
 import photoGrace from "../../../../public/images/testimonials/grace.jpg";
 import photoGuillermo from "../../../../public/images/testimonials/guillermo.jpg";
@@ -9,6 +10,13 @@ import photoStephen from "../../../../public/images/testimonials/stephen.jpg";
 import photoVictor from "../../../../public/images/testimonials/victor.jpg";
 
 export const testimonials = [
+	{
+		id: uuidv4(),
+		photo: photoFaz,
+		name: "Fazlin Bandali",
+		relationship: "Co-Founder and COO @June Health",
+		text: "Julia is an incredibly strong software engineer who brought a high level of rigor, organization, and execution to the engineering team at June Health. She consistently wrote thoughtful, high-quality code while also helping drive structure across our development process, from managing Jira workflows and sprint organization to ensuring tickets were clearly scoped, prioritized, and executed efficiently. She worked extremely well cross-functionally, particularly with Product and UX, helping translate designs and user flows into polished, scalable product experiences. What stood out most about Julia was her ability to balance technical execution with operational excellence. She was dependable, detail-oriented, collaborative, and brought a calm, thoughtful approach to fast-moving product development environments. Any product and engineering team would be lucky to have her.",
+	},
 	{
 		id: uuidv4(),
 		photo: photoGary,
