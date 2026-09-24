@@ -4,17 +4,106 @@ import imgBooksOpenImpact from "../../../../public/images/projects/booksopen-imp
 import imgBooksOpenResponsibilities from "../../../../public/images/projects/booksopen-responsibilities.jpg";
 import imgBooksOpenTech from "../../../../public/images/projects/booksopen-tech.jpg";
 import imgBooksOpenWhat from "../../../../public/images/projects/booksopen-what.svg";
-import imgBubblefish from "../../../../public/images/projects/bubblefish-image.jpg";
-import imgBubblefishTech from "../../../../public/images/projects/bubblefish-tech.jpg";
-import imgBubblefishWho from "../../../../public/images/projects/bubblefish-who.jpg";
-import imgBubblefishWhy from "../../../../public/images/projects/bubblefish-why.jpg";
+import imgJuneAdmin from "../../../../public/images/projects/june-admin.webp";
+import imgJuneAskJune from "../../../../public/images/projects/june-ask-june.webp";
+import imgJuneBooking from "../../../../public/images/projects/june-booking.webp";
+import imgJuneDashboard from "../../../../public/images/projects/june-dashboard.webp";
+import imgJune from "../../../../public/images/projects/june-image.png";
 import imgKongHow from "../../../../public/images/projects/kong-how.png";
 import imgKong from "../../../../public/images/projects/kong-image.jpg";
 import imgKongTech from "../../../../public/images/projects/kong-tech.jpg";
 import imgKongWhat from "../../../../public/images/projects/kong-what.jpg";
 import imgKongWhy from "../../../../public/images/projects/kong-why.jpg";
+import imgPaqueteliasEntrega from "../../../../public/images/projects/paquetelias-entrega.webp";
+import imgPaquetelias from "../../../../public/images/projects/paquetelias-image.webp";
+import imgPaqueteliasRecorrido from "../../../../public/images/projects/paquetelias-recorrido.webp";
+import imgPaqueteliasVolante from "../../../../public/images/projects/paquetelias-volante.webp";
 
 export const projects = [
+	{
+		id: "june-health",
+		project_name: "June Health",
+		image: imgJune,
+		intro_text:
+			"The modern healthcare solution women deserve. June Health is a virtual women's healthcare platform that unites nurse practitioners, OBGYNs, therapists, and dietitians into one coordinated care team, supporting women across every stage and condition of life.",
+		url: "https://app.junehealth.care/",
+		tags: [
+			"Design Engineer",
+			"React Native",
+			"Expo",
+			"TypeScript",
+			"UX/UI Design",
+			"Prototyping",
+			"Health Tech",
+		],
+		content: [
+			{
+				title: "What is June Health?",
+				description:
+					"<p>June Health is a <span className='font-bold'>comprehensive women's healthcare platform</span> that delivers virtual, coordinated care through a single unified team of specialists. Rather than treating women's health as one isolated condition, June supports the entire continuum of life's stages, from general and preventative health to fertility, family planning, perimenopause, menopause, and mental health, with care that is longitudinal, not transactional.</p>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgJuneDashboard}
+							alt="June Health member care dashboard"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "My Role: Design Engineer",
+				description:
+					"<p>I drew on my background as a <span className='font-bold'>former graphic designer with strong UX/UI capabilities to work as a design engineer</span>, bridging design and development. I created prototypes and then implemented those designs directly into production-ready code, so the experience users saw was the experience I had designed, translated faithfully into a polished, functioning product.</p>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgJuneAskJune}
+							alt="June Health Ask June AI assistant"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Design to Code",
+				description:
+					"<ul><li>Prototyped flows and interfaces, then built them into working, production-ready code</li><li>Owned the handoff end to end, keeping the shipped product true to the design intent</li><li>Brought a designer's eye for detail, hierarchy, and polish to the engineering work</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgJuneBooking}
+							alt="June Health appointment booking flow"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Advocating for the User",
+				description:
+					"<ul><li>Strongly advocated for UX research to ground decisions in real user needs</li><li>Championed user-centric design, encouraging it even when reviewing colleagues' code</li><li>Worked closely with leadership to help define sprint directions and priorities</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgJuneAdmin}
+							alt="June Health employer admin portal"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Tech Stack",
+				description:
+					"<ul><li><span className='font-bold'>Mobile:</span> React Native with Expo for a cross-platform app</li><li><span className='font-bold'>Language:</span> TypeScript for type safety and maintainability</li><li><span className='font-bold'>Integrations:</span> PushWoosh for push notifications, Brevo for transactional email and messaging, and Stripe for payments</li></ul>",
+			},
+		],
+	},
 	{
 		id: "kong",
 		project_name: "Kong",
@@ -171,39 +260,68 @@ export const projects = [
 		],
 	},
 	{
-		id: "bubblefish",
-		project_name: "Bubblefish UX",
-		image: imgBubblefish,
+		id: "paquetelias",
+		project_name: "Paquetelias",
+		image: imgPaquetelias,
 		intro_text:
-			"'Dive in' to the art of user-centric design with Bubblefish UX! Their revamped website showcases their commitment to creating accessible, modern, and visually engaging user experiences.",
-		url: "https://www.bubblefishux.design/",
-		tags: ["Front End", "Tailwind", "Accessibility", "UI Design", "Animation"],
+			"Send packages with people already making the trip. Paquetelias is a collaborative shipping platform that connects people who need to send a parcel with drivers already travelling to that destination, turning spare vehicle capacity into affordable, hand-delivered shipping.",
+		url: "https://paquetelias.es/",
+		tags: [
+			"Founding Developer",
+			"Full Stack",
+			"Infrastructure",
+			"Database Design",
+			"CI/CD",
+			"Vercel",
+			"Heroku",
+			"GitHub",
+		],
 		content: [
 			{
-				title: "Who is Bubblefish UX Design?",
+				title: "What is Paquetelias?",
 				description:
-					"<p>Bubblefish UX Design is a Brighton-based UX consultancy. They have provided holistic UX design services to major UK companies such as 'Chambers and Partners', 'HMRC', 'Public Health Wales', and 'Tristar Worldwide'.</p>",
+					"<p>Paquetelias is a <span className='font-bold'>collaborative shipping platform</span> that connects senders with drivers who are already making a given journey. Instead of organizing dedicated delivery trips, it makes use of journeys that are already happening, so packages travel more cheaply and drivers are compensated for their travel costs.</p>",
 				content: (
 					<div className="flex h-full w-full items-center justify-center">
 						<Image
 							className="object-cover"
-							src={imgBubblefishWho}
-							alt="Bubblefish UX Design"
+							src={imgPaqueteliasRecorrido}
+							alt="Paquetelias"
 							fill
 						/>
 					</div>
 				),
 			},
 			{
-				title: "Why was the new website necessary?",
+				title: "My Role",
 				description:
-					"<p>Because their focus is on creating designs that are accessible and easy to use for everyone, Bubblefish UX needed a website that would also embody those values. They also wanted to move away from their old website design to something that was more modern and polished.</p>",
+					"<p>As the <span className='font-bold'>founding developer</span>, I owned the technical foundation of the product end to end.</p><ul><li>Set up the core infrastructure from the ground up</li><li>Designed the database schema and data model</li><li>Built out CI/CD pipelines across GitHub, Vercel, and Heroku for reliable, automated deployments</li><li>Worked directly with the founder and product designer to define business goals and translate them into product requirements</li></ul>",
+			},
+			{
+				title: "How does it work?",
+				description:
+					"<ol><li>Search for a driver already travelling your route</li><li>Agree on a pickup location and time</li><li>The driver transports the package and hands it over in person at the destination</li></ol>",
 				content: (
 					<div className="flex h-full w-full items-center justify-center">
 						<Image
 							className="object-cover"
-							src={imgBubblefishWhy}
-							alt="Bubblefish UX Design"
+							src={imgPaqueteliasVolante}
+							alt="Paquetelias"
+							fill
+						/>
+					</div>
+				),
+			},
+			{
+				title: "Who is it for?",
+				description:
+					"<ul><li><span className='font-bold'>Senders:</span> people who need to move a parcel between cities affordably</li><li><span className='font-bold'>Drivers:</span> travellers with spare capacity who want to offset their travel costs</li><li>A hand-delivery model keeps every handoff direct and personal</li></ul>",
+				content: (
+					<div className="flex h-full w-full items-center justify-center">
+						<Image
+							className="object-cover"
+							src={imgPaqueteliasEntrega}
+							alt="Paquetelias"
 							fill
 						/>
 					</div>
@@ -211,22 +329,13 @@ export const projects = [
 			},
 			{
 				title: "Tech Stack",
-				description: "<ul><li>React</li><li>Tailwind</li></ul>",
-				content: (
-					<div className="flex h-full w-full items-center justify-center">
-						<Image
-							className="object-cover"
-							src={imgBubblefishTech}
-							alt="Bubblefish UX Design"
-							fill
-						/>
-					</div>
-				),
+				description:
+					"<ul><li><span className='font-bold'>Frontend:</span> Vite and TypeScript with Tailwind CSS, packaged with Capacitor for cross-platform native builds</li><li><span className='font-bold'>Backend & Data:</span> Supabase for the database, auth, and APIs</li><li><span className='font-bold'>Integrations:</span> Didit for identity verification and TrustAp for escrow-backed, secure payments</li><li><span className='font-bold'>Infrastructure:</span> deployed across Vercel and Heroku with CI/CD on GitHub</li></ul>",
 			},
 			{
 				title: "Next Steps",
 				description:
-					"<ul><li>Implement additional features such as a blog or news section to keep the content fresh and engaging.</li><li>Expand the website to include case studies and client testimonials to showcase successful projects.</li><li>Regularly update the design and content to keep up with the latest trends and user expectations.</li></ul>",
+					"<ul><li>Launch beyond the pre-launch waitlist to the first cities and routes</li><li>Define pricing, insurance coverage, and trust and safety flows</li><li>Grow the two-sided marketplace of senders and drivers</li></ul>",
 			},
 		],
 	},

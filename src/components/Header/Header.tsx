@@ -10,6 +10,11 @@ import SocialIcons from "../SocialIcons/SocialIcons";
 
 const navProjects = [
 	{
+		href: "/projects/june-health",
+		name: "June Health",
+		desc: "Virtual women's healthcare platform with a unified care team",
+	},
+	{
 		href: "/projects/kong",
 		name: "Kong",
 		desc: "Gamified plant ID app powered by OpenAI & StabilityAI",
@@ -20,9 +25,9 @@ const navProjects = [
 		desc: "Scheduling platform for tattoo & piercing studios",
 	},
 	{
-		href: "/projects/bubblefish",
-		name: "Bubblefish UX Design",
-		desc: "Redesigned website for a Brighton-based UX consultancy",
+		href: "/projects/paquetelias",
+		name: "Paquetelias",
+		desc: "Collaborative shipping via drivers already making the trip",
 	},
 ];
 
